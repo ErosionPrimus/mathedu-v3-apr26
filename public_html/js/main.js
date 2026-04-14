@@ -402,26 +402,79 @@
 
 })();
 
-// Fallback for slow/failed remote images (3s timeout)
+// Topic-card image quality enhancer with semantic free-image queries and safe fallback
 (function () {
   const FALLBACKS = [
     'https://i.postimg.cc/VNXg2MBn/image-search-w1728-h1080-shu-xue-ke-shi-hua-ji-he-tu-xing-dai-shu-gong-shi.jpg',
     'https://i.postimg.cc/k5WsL8Fb/image-search-w4330-h3464-shu-xue-jiao-xue-tu-biao-gong-shi-shi-jue-hua.jpg',
     'https://i.postimg.cc/Zq6HX3FP/image-search-w5000-h4160-shu-xue-ke-shi-hua-ji-he-tu-xing-dai-shu-gong-shi.jpg',
-    'https://i.postimg.cc/KYtfCLrL/image-search-w5196-h2887-shu-xue-jiao-xue-tu-biao-gong-shi-shi-jue-hua.jpg',
+    'https://i.postimg.cc/KYtfCLrL/image-search-w5196-h2887-shu-xue-jiao-xue-tu-biao-gong-shi-shi-jue-hua.jpg'
   ];
-  let idx = 0;
-  function fallback(img) {
-    img._fallback = true;
-    img.src = FALLBACKS[idx++ % FALLBACKS.length];
+
+  const SEMANTIC_QUERY_MAP = [
+    { re: /matrix|determinant|linear algebra/i, query: 'linear-algebra,matrix,mathematics' },
+    { re: /vector|space|basis|eigen/i, query: 'vector-space,geometry,mathematics' },
+    { re: /polynomial|factor|algebraic/i, query: 'algebra,formula,blackboard' },
+    { re: /calculus|derivative|integral|limit/i, query: 'calculus,graph,math' },
+    { re: /geometry|triangle|circle|shape/i, query: 'geometry,diagram,mathematics' },
+    { re: /probability|statistics|distribution/i, query: 'statistics,data,chart' },
+    { re: /prime|number theory|modular/i, query: 'numbers,mathematics,abacus' }
+  ];
+
+  let fallbackIndex = 0;
+
+  function hashText(text) {
+    let hash = 0;
+    for (let i = 0; i < text.length; i += 1) {
+      hash = (hash << 5) - hash + text.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
   }
+
+  function inferQuery(img) {
+    const card = img.closest('.topic-card');
+    const title = card?.querySelector('h3')?.textContent || '';
+    const alt = img.alt || '';
+    const seed = `${title} ${alt}`.trim();
+    for (const rule of SEMANTIC_QUERY_MAP) {
+      if (rule.re.test(seed)) return rule.query;
+    }
+    return 'mathematics,education,formula';
+  }
+
+  function setFallback(img) {
+    if (img._fallback) return;
+    img._fallback = true;
+    img.src = FALLBACKS[fallbackIndex++ % FALLBACKS.length];
+  }
+
+  function maybeUpgradeImage(img) {
+    const src = img.getAttribute('src') || '';
+    if (!src.includes('picsum.photos')) return;
+
+    const query = inferQuery(img);
+    const sig = hashText((img.alt || '') + query) % 1000;
+    img.src = `https://source.unsplash.com/640x360/?${encodeURIComponent(query)}&sig=${sig}`;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('img[src*="picsum.photos"]').forEach(function (img) {
-      const t = setTimeout(function () {
-        if (!img.complete || img.naturalWidth === 0) fallback(img);
-      }, 3000);
-      img.addEventListener('load', function () { clearTimeout(t); });
-      img.addEventListener('error', function () { clearTimeout(t); if (!img._fallback) fallback(img); });
+    document.querySelectorAll('.topic-image img, img[src*="picsum.photos"]').forEach(function (img) {
+      img.loading = img.loading || 'lazy';
+      img.decoding = img.decoding || 'async';
+      maybeUpgradeImage(img);
+
+      const timeoutId = setTimeout(function () {
+        if (!img.complete || img.naturalWidth === 0) setFallback(img);
+      }, 3500);
+
+      img.addEventListener('load', function () {
+        clearTimeout(timeoutId);
+      });
+      img.addEventListener('error', function () {
+        clearTimeout(timeoutId);
+        setFallback(img);
+      });
     });
   });
 })();
