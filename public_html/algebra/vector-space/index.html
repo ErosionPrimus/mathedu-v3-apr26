@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- STG-skytrailgroup.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Space - Algebra | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="description" content="Explore vector spaces: axioms, subspaces, basis, dimension, linear independence, and applications in mathematics and physics.">
+    <meta name="keywords" content="algebra, equations, matrices, polynomials, vector spaces, mathematics">
+    <link rel="canonical" href="https://skytrailgroup.com/algebra/vector-space">
+    <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo">
+                <i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics
+            </a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+                <li><a href="/geometry/" class="academic-nav-link">Geometry</a></li>
+                <li><a href="/number-theory/" class="academic-nav-link">Number Theory</a></li>
+                <li><a href="/statistics/" class="academic-nav-link">Statistics</a></li>
+                <li><a href="/linear-algebra/" class="academic-nav-link">Linear Algebra</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <article class="topic-detail">
+            <div class="topic-header">
+                <nav class="breadcrumb">
+                    <a href="/">Home</a>
+                    <span>›</span>
+                    <a href="./">Algebra</a>
+                    <span>›</span>
+                    <span>Vector Space</span>
+                </nav>
+                <h1>Vector Space</h1>
+                <p class="text-muted">A fundamental algebraic structure consisting of vectors that can be added together and multiplied by scalars, forming the basis of linear algebra.</p>
+            </div>
+
+            <section class="content-section">
+                <h2>Definition</h2>
+                <p>A <strong>vector space</strong> (or linear space) over a field F is a set V together with two operations:</p>
+                <ul>
+                    <li><strong>Vector Addition:</strong> A binary operation that combines two vectors to produce another vector</li>
+                    <li><strong>Scalar Multiplication:</strong> An operation that combines a scalar from F with a vector to produce another vector</li>
+                </ul>
+                <p>These operations must satisfy eight axioms for all vectors u, v, w ∈ V and all scalars a, b ∈ F.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>The Eight Axioms</h2>
+                <h3>Associativity of Addition</h3>
+                <div class="formula-box">
+                    u + (v + w) = (u + v) + w
+                </div>
+
+                <h3>Commutativity of Addition</h3>
+                <div class="formula-box">
+                    u + v = v + u
+                </div>
+
+                <h3>Identity Element of Addition</h3>
+                <p>There exists a zero vector 0 ∈ V such that:</p>
+                <div class="formula-box">
+                    v + 0 = v
+                </div>
+
+                <h3>Inverse Elements of Addition</h3>
+                <p>For every v ∈ V, there exists -v ∈ V such that:</p>
+                <div class="formula-box">
+                    v + (-v) = 0
+                </div>
+
+                <h3>Compatibility of Scalar Multiplication</h3>
+                <div class="formula-box">
+                    a(bv) = (ab)v
+                </div>
+
+                <h3>Identity Element of Scalar Multiplication</h3>
+                <div class="formula-box">
+                    1v = v
+                </div>
+                <p>Where 1 is the multiplicative identity in F.</p>
+
+                <h3>Distributivity of Scalar Multiplication over Vector Addition</h3>
+                <div class="formula-box">
+                    a(u + v) = au + av
+                </div>
+
+                <h3>Distributivity of Scalar Multiplication over Field Addition</h3>
+                <div class="formula-box">
+                    (a + b)v = av + bv
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Examples of Vector Spaces</h2>
+                
+                <h3>Euclidean Space Rⁿ</h3>
+                <p>The set of all n-tuples of real numbers:</p>
+                <div class="formula-box">
+                    Rⁿ = {(x₁, x₂, ..., xₙ) | xᵢ ∈ R}
+                </div>
+                <p>Operations are component-wise addition and scalar multiplication.</p>
+
+                <h3>Polynomial Space P(x)</h3>
+                <p>The set of all polynomials with real coefficients:</p>
+                <div class="formula-box">
+                    P(x) = {a₀ + a₁x + a₂x² + ... + aₙxⁿ | aᵢ ∈ R, n ≥ 0}
+                </div>
+
+                <h3>Matrix Space Mₘₓₙ(R)</h3>
+                <p>The set of all m × n matrices with real entries.</p>
+
+                <h3>Function Space C[a,b]</h3>
+                <p>The set of all continuous real-valued functions on interval [a,b].</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Important Concepts</h2>
+                
+                <h3>Linear Combination</h3>
+                <p>A vector w is a linear combination of vectors v₁, v₂, ..., vₙ if:</p>
+                <div class="formula-box">
+                    w = a₁v₁ + a₂v₂ + ... + aₙvₙ
+                </div>
+                <p>where a₁, a₂, ..., aₙ are scalars.</p>
+
+                <h3>Linear Independence</h3>
+                <p>Vectors v₁, v₂, ..., vₙ are linearly independent if:</p>
+                <div class="formula-box">
+                    a₁v₁ + a₂v₂ + ... + aₙvₙ = 0 ⇒ a₁ = a₂ = ... = aₙ = 0
+                </div>
+
+                <h3>Basis</h3>
+                <p>A basis is a linearly independent set of vectors that spans the entire vector space. Every vector in the space can be written uniquely as a linear combination of basis vectors.</p>
+
+                <h3>Dimension</h3>
+                <p>The dimension of a vector space is the number of vectors in any basis for the space.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Subspaces</h2>
+                <p>A <strong>subspace</strong> W of a vector space V is a subset that is itself a vector space under the same operations. To verify W is a subspace:</p>
+                <ol>
+                    <li>0 ∈ W (contains zero vector)</li>
+                    <li>Closed under addition: u, v ∈ W ⇒ u + v ∈ W</li>
+                    <li>Closed under scalar multiplication: v ∈ W, a ∈ F ⇒ av ∈ W</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Examples</h2>
+                
+                <div class="example-box">
+                    <p class="question"><strong>Example 1:</strong> Verify that R² is a vector space.</p>
+                    <p class="solution">
+                        <strong>Solution:</strong> Let u = (u₁, u₂), v = (v₁, v₂), w = (w₁, w₂) ∈ R² and a, b ∈ R.
+                        <br><br>
+                        <strong>Addition:</strong> u + v = (u₁ + v₁, u₂ + v₂) ∈ R² ✓<br>
+                        <strong>Commutativity:</strong> u + v = (u₁ + v₁, u₂ + v₂) = (v₁ + u₁, v₂ + u₂) = v + u ✓<br>
+                        <strong>Zero vector:</strong> 0 = (0, 0), so u + 0 = (u₁, u₂) = u ✓<br>
+                        <strong>Scalar multiplication:</strong> au = (au₁, au₂) ∈ R² ✓<br>
+                        All axioms are satisfied.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <p class="question"><strong>Example 2:</strong> Determine if W = {(x, y) ∈ R² | x + y = 0} is a subspace of R².</p>
+                    <p class="solution">
+                        <strong>Solution:</strong><br>
+                        1. <strong>Zero vector:</strong> (0, 0) satisfies 0 + 0 = 0, so 0 ∈ W ✓<br>
+                        2. <strong>Closure under addition:</strong> If (x₁, y₁), (x₂, y₂) ∈ W, then x₁ + y₁ = 0 and x₂ + y₂ = 0.<br>
+                        Their sum: (x₁ + x₂, y₁ + y₂). Check: (x₁ + x₂) + (y₁ + y₂) = (x₁ + y₁) + (x₂ + y₂) = 0 + 0 = 0 ✓<br>
+                        3. <strong>Closure under scalar multiplication:</strong> If (x, y) ∈ W, then x + y = 0.<br>
+                        For any scalar c: c(x, y) = (cx, cy). Check: cx + cy = c(x + y) = c(0) = 0 ✓<br>
+                        Therefore, W is a subspace of R².
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <p class="question"><strong>Example 3:</strong> Show that vectors (1, 0, 0), (0, 1, 0), and (0, 0, 1) form a basis for R³.</p>
+                    <p class="solution">
+                        <strong>Solution:</strong><br>
+                        1. <strong>Linear independence:</strong> Suppose a(1,0,0) + b(0,1,0) + c(0,0,1) = (0,0,0)<br>
+                        This gives (a, b, c) = (0, 0, 0), so a = b = c = 0. The vectors are linearly independent. ✓<br>
+                        2. <strong>Span:</strong> Any vector (x, y, z) ∈ R³ can be written as x(1,0,0) + y(0,1,0) + z(0,0,1). ✓<br>
+                        Therefore, these vectors form the standard basis for R³, and dim(R³) = 3.
+                    </p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Applications</h2>
+                <ul>
+                    <li><strong>Physics:</strong> Representing forces, velocities, and displacements in mechanics</li>
+                    <li><strong>Computer Graphics:</strong> 3D transformations, rotations, and projections</li>
+                    <li><strong>Engineering:</strong> Signal processing, control theory, and structural analysis</li>
+                    <li><strong>Data Science:</strong> Principal Component Analysis (PCA) and dimensionality reduction</li>
+                    <li><strong>Quantum Mechanics:</strong> State vectors in Hilbert spaces</li>
+                    <li><strong>Economics:</strong> Input-output models and optimization problems</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Related Topics</h2>
+                <ul>
+                    <li><a href="../matrix/">Matrix</a> - Represents linear transformations between vector spaces</li>
+                    <li><a href="./">Linear Equation</a> - Systems represented using vector notation</li>
+                    <li><a href="./">Eigenvalue</a> - Special vectors preserved under linear transformations</li>
+                    <li><a href="./">Determinant</a> - Volume scaling factor of linear transformations</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+        <footer class="academy-footer">
+        <div class="footer-content">
+            <h3 style="font-family: 'Georgia', serif; margin-bottom: 1.5rem;">SkytrailGroup Mathematics Academy</h3>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto 2rem;">
+                Advancing mathematical education through innovative technology and pedagogical research.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="/aboutus" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">About Us</a>
+                <a href="/contactus" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Contact Us</a>
+                <a href="/privacy" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Privacy Policy</a>
+                <a href="/terms" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Terms of Service</a>
+            </div>
+            <p style="margin-top: 3rem; opacity: 0.6; font-size: 0.9rem;">
+                &copy; 2026 SkytrailGroup Mathematics Academy. All rights reserved.<br>Powered by Intelligent Academic Widgets System.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../js/intelligent_academic_widgets.js"></script>
+    <script src="../../js/academic_interactions.js"></script>
+</body>
+</html>

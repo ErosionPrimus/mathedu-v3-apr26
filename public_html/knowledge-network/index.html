@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Network | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Interactive map of mathematics topics, prerequisites, and cross-links across SkytrailGroup Academy.">
+    <link rel="canonical" href="https://skytrailgroup.com/knowledge-network/">
+</head>
+<body>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo">
+                <i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics
+            </a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/#knowledge" class="academic-nav-link">Knowledge Map</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content" style="padding-bottom: 3rem;">
+        <section class="category-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/">Home</a>
+                    <span>/</span>
+                    <span>Knowledge Network</span>
+                </div>
+                <h1>Curriculum Knowledge Network</h1>
+                <p class="category-description">
+                    This graph encodes how topics relate across the academy: logical and set-theoretic foundations,
+                    disciplinary pillars, and deep-linked articles. Edge labels follow a small controlled vocabulary
+                    (foundation, prerequisite, extends, applies, related) so the map stays readable as it grows.
+                </p>
+            </div>
+        </section>
+
+        <section class="container" style="margin-top: 1.5rem;">
+            <div class="knowledge-graph-widget knowledge-graph-widget--vis" data-vis-network style="display: block; padding: 1rem; min-height: 0;">
+                <div
+                    id="full-knowledge-network"
+                    data-kg-role="mount"
+                    data-kg-toolbar="true"
+                    style="width: 100%; height: min(720px, calc(100vh - 280px)); min-height: 420px; border-radius: 12px; background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(46, 49, 5, 0.12);"
+                ></div>
+                <p style="font-size: 0.88rem; opacity: 0.8; margin-top: 1rem; line-height: 1.6;">
+                    <strong>How to use:</strong> scroll to zoom, drag the background to pan, drag nodes to rearrange.
+                    Click a node to open its topic page when a link exists. Edit relationships in
+                    <code style="font-size: 0.85em;">public_html/js/knowledge_graph.json</code> to extend the network.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="academy-footer" style="margin-top: 2rem;">
+        <div class="footer-content">
+            <p style="opacity: 0.75; font-size: 0.9rem;">© 2026 SkytrailGroup Mathematics Academy</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js" crossorigin="anonymous"></script>
+    <script src="../js/knowledge_network.js"></script>
+    <script src="../js/academic_interactions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var t = document.querySelector('.mobile-nav-toggle');
+            var m = document.querySelector('.academic-nav-menu');
+            if (t && m) {
+                t.addEventListener('click', function () {
+                    m.classList.toggle('active');
+                    var open = m.classList.contains('active');
+                    t.setAttribute('aria-expanded', open);
+                    t.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

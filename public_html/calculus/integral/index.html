@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral calculus overview | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="description" content="Expert notes on Integral calculus overview: definitions, core results, and examples.">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/integral">
+    <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+                <li><a href="/geometry/" class="academic-nav-link">Geometry</a></li>
+                <li><a href="/number-theory/" class="academic-nav-link">Number Theory</a></li>
+                <li><a href="/statistics/" class="academic-nav-link">Statistics</a></li>
+                <li><a href="/linear-algebra/" class="academic-nav-link">Linear Algebra</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <main class="main-container">
+
+        <article class="topic-detail">
+            <header class="topic-header">
+                <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../">Calculus</a><span>›</span><span>Integral calculus overview</span></nav>
+                <h1>Integral calculus overview</h1>
+                <p class="text-muted">Expert reference for integral calculus overview in single-variable and multivariable calculus.</p>
+            </header>
+            <section class="content-section">
+                <h2>Formal setup</h2>
+                <p>The Riemann integral \(\int_a^b f\) is the limit of sums \(\sum f(\xi_i)\Delta x_i\) over refining partitions; Darboux upper/lower sums give equivalent definitions for regulated functions.</p>
+                <div class="formula-box">\[\int_a^b f(x)\,dx=\lim_{\|\Pi\|\to0}\sum_i f(\xi_i)\Delta x_i\]</div>
+            </section>
+            <section class="content-section">
+                <h2>Key ideas</h2>
+                <ul><li>FTC links integration and differentiation: \(\frac{d}{dx}\int_a^x f=f(x)\) for continuous \(f\).</li><li>Linearity and additivity over intervals are fundamental.</li></ul>
+            </section>
+            <section class="content-section">
+                <h2>Worked example</h2>
+                <div class="example-box">
+                    <p class="question"><strong>Problem.</strong> Why is \(\int_0^1 x^2\,dx=1/3\)?</p>
+                    <p class="solution"><strong>Solution.</strong> Antiderivative \(x^3/3\); evaluate \(1/3-0\).</p>
+                </div>
+            </section>
+            <section class="content-section related-topics">
+                <h3>Related topics</h3>
+                <ul><li><a href="../">Calculus hub</a></li><li><a href="../limit/">Limits</a></li><li><a href="../derivative/">Derivatives</a></li><li><a href="../definite-integral/">Definite integral</a></li></ul>
+            </section>
+        </article>
+    <div class="content-section" id="indepth"><h2>In Depth</h2><p>The integral is the central concept of integral calculus, capturing the idea of continuous summation. The indefinite integral (antiderivative) reverses differentiation; the definite integral computes signed area. The Fundamental Theorem of Calculus connects them: \(\int_a^b f(x)\,dx = F(b)-F(a)\) where \(F'=f\).</p><p>Riemann integration defines \(\int_a^b f\,dx\) as the limit of Riemann sums. Lebesgue integration, developed in the early 20th century, extends this to a much larger class of functions and has better convergence properties — the dominated convergence theorem allows limits and integrals to be exchanged under mild conditions.</p><p>Improper integrals handle unbounded intervals or unbounded integrands: \(\int_1^\infty x^{-p}\,dx\) converges for \(p>1\) and diverges for \(p\leq1\). The comparison test, limit comparison test, and Dirichlet's test determine convergence without computing the integral explicitly.</p><p>Multiple integrals extend integration to functions of several variables. Fubini's theorem allows a double integral to be computed as iterated single integrals. Change of variables (substitution in multiple dimensions) uses the Jacobian determinant: \(\iint_R f\,dA = \iint_S f(\mathbf{g}(u,v))|J|\,du\,dv\).</p></div>
+<div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>Integration has three major computational techniques: substitution (reversing the chain rule), integration by parts \(\int u\,dv=uv-\int v\,du\) (reversing the product rule), and partial fractions (decomposing rational functions). Trigonometric substitution handles integrands involving \(\sqrt{a^2-x^2}\), \(\sqrt{a^2+x^2}\), and \(\sqrt{x^2-a^2}\).</p><p>Numerical integration methods — the trapezoidal rule, Simpson's rule, and Gaussian quadrature — approximate definite integrals when antiderivatives are unavailable. Simpson's rule achieves \(O(h^4)\) accuracy; Gaussian quadrature with \(n\) points is exact for polynomials of degree \(\leq2n-1\).</p><p>Applications span every quantitative field: computing areas, volumes, arc lengths, surface areas, work, fluid pressure, probability (CDF from PDF), expected values, and Fourier coefficients. The integral is the fundamental tool for converting local (differential) information into global (cumulative) quantities.</p></div>
+<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of integral connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+</main>
+    <footer class="academy-footer">
+        <div class="footer-content">
+            <p style="opacity:0.75;font-size:0.9rem;">&copy; 2026 SkytrailGroup Mathematics Academy</p>
+        </div>
+    </footer>
+    <script src="../../js/intelligent_academic_widgets.js"></script>
+    <script src="../../js/academic_interactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- STG-skytrailgroup.com -->
+    
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google AdSense (Primary: ca-pub-7040270645748987, Secondary: pub-3647624437955489) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987"
+     crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkytrailGroup Mathematics Academy | Advanced Mathematics Education</title>
+    <meta name="description" content="SkytrailGroup Mathematics Academy provides comprehensive mathematics education with intelligent academic widgets, theorem visualization, and interactive learning tools.">
+    <meta name="keywords" content="mathematics, algebra, calculus, geometry, statistics, theorem, proof, interactive learning, academic widgets">
+    
+    <!-- Cedar Design System Academic Styles -->
+    <link rel="stylesheet" href="css/intelligent_academic_widgets.css">
+    
+    <!-- Google Fonts for Academic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for Mathematical Notation -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Additional custom styles */
+        :root {
+            --color-academic-primary: #dee777;
+            --color-academic-secondary: #2e3105;
+            --color-academic-dark: #b7bb7e;
+            --color-academic-light: #fffcc0;
+            --color-academic-bg: #fdffe9;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--color-academic-secondary);
+            background: linear-gradient(135deg, var(--color-academic-bg) 0%, #f5f7e5 100%);
+            min-height: 100vh;
+        }
+        
+        .academy-header {
+            background: linear-gradient(135deg, var(--color-academic-secondary) 0%, #1a1c03 100%);
+            color: var(--color-academic-bg);
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .academy-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23dee777" opacity="0.3"/></svg>');
+            opacity: 0.1;
+        }
+        
+        .academy-title {
+            font-family: 'Georgia', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            color: var(--color-academic-light);
+        }
+        
+        .academy-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            width: 50%;
+            height: 4px;
+            background: var(--color-academic-primary);
+            border-radius: 2px;
+        }
+        
+        .academy-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            color: var(--color-academic-secondary);
+            margin: 3rem 0 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--color-academic-primary);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(46, 49, 5, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(222, 231, 119, 0.3);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(46, 49, 5, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-academic-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--color-academic-secondary);
+        }
+        
+        .feature-title {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            color: var(--color-academic-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .academy-footer {
+            background: var(--color-academic-secondary);
+            color: var(--color-academic-bg);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .math-preview {
+            font-family: 'Cambria Math', 'Latin Modern Math', serif;
+            font-size: 1.2rem;
+            background: rgba(255, 252, 192, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--color-academic-primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 56px;
+            }
+            .academy-title {
+                font-size: 2rem;
+            }
+            .academy-subtitle {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.75rem;
+            }
+            .main-container {
+                padding: 1rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .academy-header {
+                padding: 2rem 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .academy-title {
+                font-size: 1.5rem;
+            }
+            .feature-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+    <link rel="canonical" href="https://skytrailgroup.com">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Academic Navigation -->
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo">
+                <i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics
+            </a>
+            <ul class="academic-nav-menu">
+                <li><a href="#home" class="academic-nav-link">Home</a></li>
+                <li><a href="#theorems" class="academic-nav-link">Theorems</a></li>
+                <li><a href="#examples" class="academic-nav-link">Examples</a></li>
+                <li><a href="#resources" class="academic-nav-link">Resources</a></li>
+                <li><a href="#knowledge" class="academic-nav-link">Knowledge Map</a></li>
+                <li><a href="/knowledge-network/" class="academic-nav-link">Full Graph</a></li>
+                <li><a href="#quiz" class="academic-nav-link">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Academy Header -->
+    <header class="academy-header" id="home">
+        <div class="main-container">
+            <h1 class="academy-title">SkytrailGroup Mathematics Academy</h1>
+            <p class="academy-subtitle">Advancing mathematical understanding through intelligent academic widgets and interactive learning experiences</p>
+            
+            <div class="math-preview">
+                \( \int_{a}^{b} f(x) \, dx = F(b) - F(a) \quad \text{where} \quad F'(x) = f(x) \)
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <button class="academic-button academic-button-primary" onclick="scrollToSection('theorems')">
+                    <i class="fas fa-graduation-cap"></i> Explore Theorems
+                </button>
+                <button class="academic-button academic-button-secondary" onclick="scrollToSection('quiz')" style="margin-left: 1rem;">
+                    <i class="fas fa-brain"></i> Take a Quiz
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Features Section -->
+        <section class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3 class="feature-title">Interactive Theorems</h3>
+                <p>Explore mathematical theorems with step-by-step proofs, interactive elements, and visual explanations using our intelligent academic widgets.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="feature-title">Visual Learning</h3>
+                <p>Complex mathematical concepts visualized through graphs, diagrams, and interactive simulations that enhance understanding.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3 class="feature-title">Problem Solving</h3>
+                <p>Practice with carefully curated examples and exercises that build problem-solving skills and mathematical intuition.</p>
+            </div>
+        </section>
+
+        <!-- Theorems Section -->
+        <section id="theorems">
+            <h2 class="section-title">Fundamental Theorems</h2>
+            
+            <!-- Theorem Widget Example -->
+            <div class="theorem-widget academic-fade-in-up">
+                <h3 class="theorem-title">Pythagorean Theorem</h3>
+                <p class="theorem-content">
+                    In a right-angled triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides.
+                </p>
+                <div class="math-preview">
+                    \( a^2 + b^2 = c^2 \)
+                </div>
+                <button class="theorem-proof-toggle">
+                    <span>Show Proof</span> <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Proof Widget -->
+            <div class="proof-widget">
+                <div class="proof-step">Consider a right-angled triangle with sides \(a\), \(b\), and hypotenuse \(c\).</div>
+                <div class="proof-step">Construct a square with side length \(a + b\).</div>
+                <div class="proof-step">Arrange four copies of the triangle within the square.</div>
+                <div class="proof-step">The area of the inner square is \(c^2\).</div>
+                <div class="proof-step">The total area is also \((a + b)^2 = a^2 + 2ab + b^2\).</div>
+                <div class="proof-step">Equating and simplifying gives \(a^2 + b^2 = c^2\).</div>
+            </div>
+            
+            <!-- Another Theorem Widget -->
+            <div class="theorem-widget academic-fade-in-up academic-delay-200">
+                <h3 class="theorem-title">Fundamental Theorem of Calculus</h3>
+                <p class="theorem-content">
+                    The derivative of an integral of a function is the original function itself. This theorem links the concepts of differentiation and integration.
+                </p>
+                <div class="math-preview">
+                    \( \frac{d}{dx} \int_{a}^{x} f(t) \, dt = f(x) \)
+                </div>
+                <button class="theorem-proof-toggle">
+                    <span>Show Proof</span> <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" style="margin-top: 4rem;">
+            <h2 class="section-title">Mathematical Examples</h2>
+
+            <!-- Category filter -->
+            <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin:2rem 0 2.5rem;">
+                <button class="academic-button academic-button-primary examples-filter-btn" data-cat="all" style="padding:6px 16px;font-size:0.9rem;">All</button>
+                <button class="academic-button academic-button-secondary examples-filter-btn" data-cat="algebra" style="padding:6px 16px;font-size:0.9rem;">Algebra</button>
+                <button class="academic-button academic-button-secondary examples-filter-btn" data-cat="calculus" style="padding:6px 16px;font-size:0.9rem;">Calculus</button>
+                <button class="academic-button academic-button-secondary examples-filter-btn" data-cat="geometry" style="padding:6px 16px;font-size:0.9rem;">Geometry</button>
+                <button class="academic-button academic-button-secondary examples-filter-btn" data-cat="number-theory" style="padding:6px 16px;font-size:0.9rem;">Number Theory</button>
+                <button class="academic-button academic-button-secondary examples-filter-btn" data-cat="statistics" style="padding:6px 16px;font-size:0.9rem;">Statistics</button>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;" id="examplesGrid">
+
+                <!-- Algebra -->
+                <div class="feature-card" data-cat="algebra">
+                    <div class="feature-icon"><i class="fas fa-superscript"></i></div>
+                    <h3 class="feature-title">Solving Quadratic Equations</h3>
+                    <p>Find the roots of \(x^2 - 5x + 6 = 0\) using the quadratic formula. Discriminant analysis and step-by-step solution.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \)</div>
+                    <a href="/algebra/polynomial" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="algebra">
+                    <div class="feature-icon"><i class="fas fa-th"></i></div>
+                    <h3 class="feature-title">Matrix Multiplication</h3>
+                    <p>A rectangular array of numbers arranged in rows and columns. Essential for linear algebra, computer graphics, and data analysis.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( (AB)_{ij} = \sum_k A_{ik} B_{kj} \)</div>
+                    <a href="/algebra/matrix" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="algebra">
+                    <div class="feature-icon"><i class="fas fa-arrows-alt"></i></div>
+                    <h3 class="feature-title">Vector Space</h3>
+                    <p>A collection of vectors that can be added together and multiplied by scalars. Fundamental structure in linear algebra.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( \mathbf{u} + \mathbf{v} \in V, \quad c\mathbf{u} \in V \)</div>
+                    <a href="/algebra/vector-space" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="algebra">
+                    <div class="feature-icon"><i class="fas fa-divide"></i></div>
+                    <h3 class="feature-title">Polynomial Factorization</h3>
+                    <p>Breaking down a polynomial into a product of simpler factors. Includes factoring by grouping, difference of squares, and more.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( x^2 - 4 = (x+2)(x-2) \)</div>
+                    <a href="/algebra/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <!-- Calculus -->
+                <div class="feature-card" data-cat="calculus">
+                    <div class="feature-icon"><i class="fas fa-chart-area"></i></div>
+                    <h3 class="feature-title">Limits</h3>
+                    <p>The value that a function approaches as the input approaches some value. Foundation of differential and integral calculus.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( \lim_{x \to 0} \frac{\sin x}{x} = 1 \)</div>
+                    <a href="/calculus/limit" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="calculus">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="feature-title">Derivatives</h3>
+                    <p>Measures the rate at which a function changes at a given point. Power rule, product rule, quotient rule, and chain rule.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( \frac{d}{dx}[x^n] = nx^{n-1} \)</div>
+                    <a href="/calculus/derivative" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="calculus">
+                    <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+                    <h3 class="feature-title">Definite Integral</h3>
+                    <p>Represents the signed area under a curve between two points. Evaluated using the Fundamental Theorem of Calculus.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( \int_a^b f(x)\,dx = F(b) - F(a) \)</div>
+                    <a href="/calculus/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="calculus">
+                    <div class="feature-icon"><i class="fas fa-wave-square"></i></div>
+                    <h3 class="feature-title">Integration Techniques</h3>
+                    <p>Substitution, integration by parts, partial fractions, and trigonometric integrals for evaluating complex integrals.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( \int u\,dv = uv - \int v\,du \)</div>
+                    <a href="/calculus/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <!-- Geometry -->
+                <div class="feature-card" data-cat="geometry">
+                    <div class="feature-icon"><i class="fas fa-draw-polygon"></i></div>
+                    <h3 class="feature-title">Triangle Properties</h3>
+                    <p>A polygon with three edges and three vertices. Includes the Pythagorean theorem, trigonometric ratios, and area formulas.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( a^2 + b^2 = c^2 \)</div>
+                    <a href="/geometry/triangle" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="geometry">
+                    <div class="feature-icon"><i class="fas fa-circle"></i></div>
+                    <h3 class="feature-title">Circle Theorems</h3>
+                    <p>The set of all points equidistant from a center. Covers arc length, sector area, inscribed angles, and tangent lines.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( A = \pi r^2, \quad C = 2\pi r \)</div>
+                    <a href="/geometry/circle" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <!-- Number Theory -->
+                <div class="feature-card" data-cat="number-theory">
+                    <div class="feature-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3 class="feature-title">Prime Numbers</h3>
+                    <p>A natural number greater than 1 with no positive divisors other than 1 and itself. The building blocks of integers.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( p \in \mathbb{P} \Rightarrow p \nmid ab \text{ or } p|a \text{ or } p|b \)</div>
+                    <a href="/number-theory/prime-number" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="number-theory">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="feature-title">Modular Arithmetic</h3>
+                    <p>A system of arithmetic where numbers "wrap around" after reaching a modulus. Foundation of cryptography and number theory.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( a \equiv b \pmod{n} \)</div>
+                    <a href="/number-theory/modular-arithmetic" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <!-- Statistics -->
+                <div class="feature-card" data-cat="statistics">
+                    <div class="feature-icon"><i class="fas fa-dice"></i></div>
+                    <h3 class="feature-title">Probability</h3>
+                    <p>The branch of mathematics concerning numerical descriptions of how likely an event is to occur, from 0 to 1.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( P(A \cup B) = P(A) + P(B) - P(A \cap B) \)</div>
+                    <a href="/statistics/probability" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+                <div class="feature-card" data-cat="statistics">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <h3 class="feature-title">Normal Distribution</h3>
+                    <p>A continuous probability distribution characterized by its bell-shaped curve. Central to statistical theory and inference.</p>
+                    <div class="math-preview" style="font-size:0.95rem;">\( f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \)</div>
+                    <a href="/statistics/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Read More →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" style="margin-top: 4rem;">
+            <h2 class="section-title">Resources</h2>
+            <p style="text-align:center;opacity:0.7;margin-bottom:2.5rem;">Explore our full library of mathematical topics organized by category</p>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;">
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-superscript"></i></div>
+                    <h3 class="feature-title">Algebra</h3>
+                    <p>Algebraic expressions, linear equations, polynomials, matrices, vector spaces, determinants, and factorization.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Expressions</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Matrices</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Polynomials</span>
+                    <a href="/algebra/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Algebra →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-area"></i></div>
+                    <h3 class="feature-title">Calculus</h3>
+                    <p>Limits, derivatives, integrals, differential equations, series, and multivariable calculus with worked examples.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Limits</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Derivatives</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Integrals</span>
+                    <a href="/calculus/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Calculus →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-draw-polygon"></i></div>
+                    <h3 class="feature-title">Geometry</h3>
+                    <p>Euclidean geometry, triangles, circles, coordinate geometry, transformations, and solid geometry.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Triangles</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Circles</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Euclidean</span>
+                    <a href="/geometry/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Geometry →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3 class="feature-title">Number Theory</h3>
+                    <p>Prime numbers, modular arithmetic, divisibility, Diophantine equations, and the distribution of primes.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Primes</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Modular Arithmetic</span>
+                    <a href="/number-theory/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Number Theory →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="feature-title">Statistics</h3>
+                    <p>Probability, normal distribution, hypothesis testing, regression analysis, and statistical inference.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Probability</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Distributions</span>
+                    <a href="/statistics/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Statistics →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-vector-square"></i></div>
+                    <h3 class="feature-title">Linear Algebra</h3>
+                    <p>Eigenvalues, eigenvectors, linear transformations, inner product spaces, and singular value decomposition.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Eigenvalues</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Transformations</span>
+                    <a href="/linear-algebra/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Linear Algebra →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="feature-title">Topology</h3>
+                    <p>Topological spaces, continuity, compactness, connectedness, and the foundations of modern geometry.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Spaces</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Compactness</span>
+                    <a href="/topology/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Topology →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+                    <h3 class="feature-title">Mathematical Analysis</h3>
+                    <p>Real analysis, sequences, series convergence, metric spaces, and measure theory.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Sequences</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Series</span>
+                    <a href="/mathematical-analysis/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Mathematical Analysis →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3 class="feature-title">Combinatorics</h3>
+                    <p>Permutations, combinations, graph theory, generating functions, and the pigeonhole principle.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Permutations</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Graph Theory</span>
+                    <a href="/combinatorics/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Combinatorics →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="feature-title">Logic</h3>
+                    <p>Propositional logic, predicate logic, proof techniques, Boolean algebra, and formal reasoning.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Propositional</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Proofs</span>
+                    <a href="/logic/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Logic →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-object-group"></i></div>
+                    <h3 class="feature-title">Set Theory</h3>
+                    <p>Sets, relations, functions, cardinality, Zermelo–Fraenkel axioms, and the foundations of mathematics.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Sets</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Cardinality</span>
+                    <a href="/set-theory/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Set Theory →</a></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="feature-title">Mathematical Modeling</h3>
+                    <p>Translating real-world problems into mathematical language. Differential equations, optimization, and simulation.</p>
+                    <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Modeling</span>
+                        <span style="background:var(--color-academic-light);padding:2px 10px;border-radius:12px;font-size:0.8rem;">Optimization</span>
+                    <a href="/mathematical-modeling/" style="display:inline-block;margin-top:1rem;color:var(--color-academic-secondary);font-weight:600;font-size:0.9rem;">Explore Mathematical Modeling →</a></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Equation Widget Section -->
+        <section id="equations" style="margin-top: 4rem;">
+            <h2 class="section-title">Interactive Equations</h2>
+            
+            <div class="equation-widget academic-fade-in-up academic-delay-300">
+                <div class="equation-display">
+                    \( e^{i\pi} + 1 = 0 \)
+                </div>
+                <p class="equation-explanation">
+                    Euler's identity, often called the most beautiful equation in mathematics, combines five fundamental mathematical constants.
+                </p>
+                <div class="equation-solution">
+                    <p><strong>Explanation:</strong> This identity relates exponential functions, trigonometry, and complex numbers through Euler's formula: \(e^{i\theta} = \cos\theta + i\sin\theta\).</p>
+                </div>
+                <button class="academic-button academic-button-primary" style="margin-top: 1rem;" onclick="toggleEquationSolution(this)">
+                    <i class="fas fa-lightbulb"></i> Show Explanation
+                </button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" style="margin-top: 4rem;">
+            <h2 class="section-title">Interactive Quiz</h2>
+            
+            <div class="quiz-widget academic-fade-in-up academic-delay-500">
+                <div class="quiz-question">
+                    What is the derivative of \(f(x) = x^3 + 3x^2 - 5x + 2\)?
+                </div>
+                
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="false">
+                        \(3x^2 + 6x + 5\)
+                    </div>
+                    <div class="quiz-option" data-correct="true">
+                        \(3x^2 + 6x - 5\)
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        \(x^2 + 6x - 5\)
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        \(3x^2 + 3x - 5\)
+                    </div>
+                </div>
+                
+                <div class="quiz-feedback"></div>
+            </div>
+        </section>
+
+        <!-- Knowledge Graph Preview -->
+        <section id="knowledge" style="margin-top: 4rem;">
+            <h2 class="section-title">Mathematics Knowledge Graph</h2>
+            <p style="text-align: center; color: var(--color-academic-text-light); margin-bottom: 1rem; max-width: 720px; margin-left: auto; margin-right: auto;">
+                Drag nodes, zoom with the mouse wheel, and click a topic to open its page. Edge colors indicate relationship types: foundation, prerequisite, structural extension, or application.
+            </p>
+            <p style="text-align: center; margin-bottom: 1.5rem;">
+                <a href="/knowledge-network/" class="academic-button academic-button-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                    <i class="fas fa-expand-alt"></i> Open fullscreen knowledge network
+                </a>
+            </p>
+            
+            <div class="knowledge-graph-widget knowledge-graph-widget--vis" data-vis-network style="min-height: 0; border: 2px solid var(--color-academic-primary); display: block; padding: 1rem;">
+                <div id="home-knowledge-network" data-kg-role="mount" style="width: 100%; height: min(520px, 70vh); min-height: 360px; border-radius: 12px; background: rgba(255, 255, 255, 0.92);"></div>
+                <p style="text-align: center; font-size: 0.85rem; opacity: 0.75; margin-top: 0.75rem; margin-bottom: 0;">Tip: use the physics toggle on the full graph page for a stable layout after exploration.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Academy Footer -->
+    <footer class="academy-footer">
+        <div class="footer-content">
+            <h3 style="font-family: 'Georgia', serif; margin-bottom: 1.5rem;">SkytrailGroup Mathematics Academy</h3>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto 2rem;">
+                Advancing mathematical education through innovative technology and pedagogical research.
+            </p>
+            
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="/aboutus" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">About Us</a>
+                <a href="/contactus" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Contact Us</a>
+                <a href="/privacy" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Privacy Policy</a>
+                <a href="/terms" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Terms of Service</a>
+            </div>
+            
+            <p style="margin-top: 3rem; opacity: 0.6; font-size: 0.9rem;">
+                © 2026 SkytrailGroup Mathematics Academy. All rights reserved.
+                <br>Powered by Intelligent Academic Widgets System.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js" crossorigin="anonymous"></script>
+    <script src="js/intelligent_academic_widgets.js"></script>
+    <script src="js/academic_interactions.js"></script>
+    <script src="js/knowledge_network.js"></script>
+    
+    <script>
+        // Initialize MathJax
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+        
+        // Custom functions
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        function toggleEquationSolution(button) {
+            const equationWidget = button.closest('.equation-widget');
+            const solution = equationWidget.querySelector('.equation-solution');
+            solution.classList.toggle('active');
+            
+            if (solution.classList.contains('active')) {
+                button.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Explanation';
+            } else {
+                button.innerHTML = '<i class="fas fa-lightbulb"></i> Show Explanation';
+            }
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation classes
+            const elements = document.querySelectorAll('.academic-fade-in-up');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+            
+            // Initialize quiz interactions
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Clear previous selections
+                    quizOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Select this option
+                    this.classList.add('selected');
+                    
+                    // Show feedback
+                    const isCorrect = this.dataset.correct === 'true';
+                    const feedback = document.querySelector('.quiz-feedback');
+                    if (feedback) {
+                        feedback.className = isCorrect ? 'quiz-feedback correct' : 'quiz-feedback incorrect';
+                        feedback.textContent = isCorrect ? 
+                            '✓ Correct! Well done.' : 
+                            '✗ Incorrect. The correct answer is: 3x² + 6x - 5';
+                        feedback.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Examples category filter
+            document.querySelectorAll('.examples-filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const cat = this.dataset.cat;
+                    document.querySelectorAll('.examples-filter-btn').forEach(b => {
+                        b.className = 'academic-button academic-button-secondary examples-filter-btn';
+                        b.style.cssText = 'padding:6px 16px;font-size:0.9rem;';
+                    });
+                    this.className = 'academic-button academic-button-primary examples-filter-btn';
+                    this.style.cssText = 'padding:6px 16px;font-size:0.9rem;';
+                    document.querySelectorAll('#examplesGrid [data-cat]').forEach(card => {
+                        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+                    });
+                });
+            });
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.academic-nav-menu');
+            
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    const expanded = navMenu.classList.contains('active');
+                    this.setAttribute('aria-expanded', expanded);
+                    this.innerHTML = expanded ?
+                        '<i class="fas fa-times"></i>' :
+                        '<i class="fas fa-bars"></i>';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

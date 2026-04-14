@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composite numbers | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="description" content="Expert notes on Composite numbers: definitions, core results, and examples.">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/composite-number">
+    <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+                <li><a href="/geometry/" class="academic-nav-link">Geometry</a></li>
+                <li><a href="/number-theory/" class="academic-nav-link">Number Theory</a></li>
+                <li><a href="/statistics/" class="academic-nav-link">Statistics</a></li>
+                <li><a href="/linear-algebra/" class="academic-nav-link">Linear Algebra</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <main class="main-container">
+
+        <article class="topic-detail">
+            <header class="topic-header">
+                <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../">Number theory</a><span>›</span><span>Composite numbers</span></nav>
+                <h1>Composite numbers</h1>
+                <p class="text-muted">Graduate-accessible overview of composite numbers with classical statements and a concrete illustration.</p>
+            </header>
+            <section class="content-section">
+                <h2>Formal setup</h2>
+                <p>Integers \(n>1\) with a divisor strictly between \(1\) and \(n\); unique factorization into primes (FTA).</p>
+                
+            </section>
+            <section class="content-section">
+                <h2>Key ideas</h2>
+                <ul><li>Proofs mix elementary divisibility with algebraic and analytic tools.</li><li>Computational aspects matter for cryptography and algorithms.</li><li>Open problems (twin primes, Goldbach, RH) drive research.</li></ul>
+            </section>
+            <section class="content-section">
+                <h2>Worked example</h2>
+                <div class="example-box">
+                    <p class="question"><strong>Problem.</strong> Illustrate the topic with a numeric or conceptual takeaway.</p>
+                    <p class="solution"><strong>Solution.</strong> Example: \(2024=2^3\cdot 11\cdot 23\).</p>
+                </div>
+            </section>
+            <section class="content-section related-topics">
+                <h3>Related topics</h3>
+                <ul><li><a href="../">Number theory hub</a></li><li><a href="../prime-number/">Prime numbers</a></li><li><a href="../modular-arithmetic/">Modular arithmetic</a></li></ul>
+            </section>
+        </article>
+    <div class="content-section" id="indepth"><h2>In Depth</h2><p>A composite number is a positive integer greater than 1 that has at least one positive divisor other than 1 and itself. Every composite number can be written as a product of primes — this is the content of the Fundamental Theorem of Arithmetic. The smallest composite is 4 = 2×2.</p><p>Composite numbers are detected by trial division: test divisibility by all primes up to \(\sqrt{n}\). If none divide \(n\), it is prime; otherwise it is composite. For large numbers, probabilistic primality tests (Miller–Rabin) are far faster and are used in cryptographic libraries.</p><p>Highly composite numbers (Ramanujan's term) have more divisors than any smaller positive integer: 1, 2, 4, 6, 12, 24, 60, 120, … They arise naturally in problems involving divisibility and are related to the divisor function \(d(n)\).</p><p>The density of composites grows: by the prime number theorem, the fraction of integers up to \(N\) that are prime is approximately \(1/\ln N\), so almost all large integers are composite. Consecutive composites can be arbitrarily long — the sequence \(n!+2, n!+3, \ldots, n!+n\) gives \(n-1\) consecutive composites.</p><p>In cryptography, the difficulty of factoring large composites (products of two large primes) underpins RSA encryption. The security relies on the fact that while multiplying two primes is fast, reversing the process — finding the factors of a large composite — is computationally infeasible with current algorithms.</p></div>
+<div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>Smooth numbers (numbers with only small prime factors) are important in factoring algorithms. The quadratic sieve and number field sieve collect relations involving smooth numbers to factor large composites. A number is \(B\)-smooth if all its prime factors are \(\leq B\).</p><p>The Carmichael numbers are composite numbers \(n\) satisfying \(a^{n-1}\equiv1\pmod{n}\) for all \(a\) with \(\gcd(a,n)=1\) — they fool Fermat's primality test. The smallest is 561=3×11×17. The Miller–Rabin test is not fooled by Carmichael numbers.</p><p>Semiprime numbers (products of exactly two primes) are the basis of RSA cryptography. The difficulty of factoring a semiprime \(n=pq\) into its prime factors \(p\) and \(q\) is the computational hardness assumption underlying RSA security.</p></div>
+<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of composite number connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+</main>
+    <footer class="academy-footer">
+        <div class="footer-content">
+            <p style="opacity:0.75;font-size:0.9rem;">&copy; 2026 SkytrailGroup Mathematics Academy</p>
+        </div>
+    </footer>
+    <script src="../../js/intelligent_academic_widgets.js"></script>
+    <script src="../../js/academic_interactions.js"></script>
+</body>
+</html>

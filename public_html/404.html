@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .error-title {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        .error-message {
+            color: var(--muted-foreground);
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: var(--primary-foreground);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .back-home:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+    <meta name="description" content="Page not found. Return to SkytrailGroup Mathematics Academy to explore our mathematics education resources.">
+    <link rel="canonical" href="https://skytrailgroup.com/404">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Math<span>Wiki</span></a>
+            </div>
+            <nav class="main-nav">
+                <a href="/">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="error-page">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-message">The mathematical concept you're looking for seems to be undefined in our domain. Let's return to familiar territory.</p>
+            <a href="/" class="back-home">← Back to Home</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Math Encyclopedia. Unlocking the World of Mathematics.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

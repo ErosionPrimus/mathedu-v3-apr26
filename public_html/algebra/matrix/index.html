@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- STG-skytrailgroup.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix - Algebra | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="description" content="Learn about matrices: definition, operations, determinants, inverses, and applications in linear algebra and computer science.">
+    <meta name="keywords" content="algebra, equations, matrices, polynomials, vector spaces, mathematics">
+    <link rel="canonical" href="https://skytrailgroup.com/algebra/matrix">
+    <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo">
+                <i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics
+            </a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+                <li><a href="/geometry/" class="academic-nav-link">Geometry</a></li>
+                <li><a href="/number-theory/" class="academic-nav-link">Number Theory</a></li>
+                <li><a href="/statistics/" class="academic-nav-link">Statistics</a></li>
+                <li><a href="/linear-algebra/" class="academic-nav-link">Linear Algebra</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <article class="topic-detail">
+            <div class="topic-header">
+                <nav class="breadcrumb">
+                    <a href="/">Home</a>
+                    <span>›</span>
+                    <a href="./">Algebra</a>
+                    <span>›</span>
+                    <span>Matrix</span>
+                </nav>
+                <h1>Matrix</h1>
+                <p class="text-muted">A fundamental structure in linear algebra with applications across mathematics, physics, computer science, and engineering.</p>
+            </div>
+
+            <section class="content-section">
+                <h2>Definition</h2>
+                <p>A <strong>matrix</strong> is a rectangular array of numbers, symbols, or expressions arranged in rows and columns. Matrices are fundamental objects in linear algebra and provide a compact way to represent and manipulate systems of linear equations, linear transformations, and geometric operations.</p>
+                <p>An <em>m × n</em> matrix has <em>m</em> rows and <em>n</em> columns. The entry in the <em>i</em>-th row and <em>j</em>-th column is denoted as <em>a<sub>ij</sub></em> or <em>A<sub>ij</sub></em>.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>General Form</h2>
+                <div class="formula-box">
+                    A = [a<sub>ij</sub>] =
+                    \begin{bmatrix}
+                    a_{11} & a_{12} & \cdots & a_{1n} \\
+                    a_{21} & a_{22} & \cdots & a_{2n} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    a_{m1} & a_{m2} & \cdots & a_{mn}
+                    \end{bmatrix}
+                </div>
+                <p>Where <em>i = 1, 2, ..., m</em> and <em>j = 1, 2, ..., n</em>.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Types of Matrices</h2>
+                <ul>
+                    <li><strong>Square Matrix:</strong> A matrix with equal number of rows and columns (n × n).</li>
+                    <li><strong>Diagonal Matrix:</strong> A square matrix where all off-diagonal entries are zero.</li>
+                    <li><strong>Identity Matrix (I):</strong> A diagonal matrix with all diagonal entries equal to 1.</li>
+                    <li><strong>Zero Matrix:</strong> A matrix where all entries are zero.</li>
+                    <li><strong>Symmetric Matrix:</strong> A square matrix where A = A<sup>T</sup> (equal to its transpose).</li>
+                    <li><strong>Upper Triangular Matrix:</strong> All entries below the main diagonal are zero.</li>
+                    <li><strong>Lower Triangular Matrix:</strong> All entries above the main diagonal are zero.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Matrix Operations</h2>
+                
+                <h3>1. Matrix Addition</h3>
+                <p>For two matrices A and B of the same dimensions:</p>
+                <div class="formula-box">
+                    (A + B)<sub>ij</sub> = A<sub>ij</sub> + B<sub>ij</sub>
+                </div>
+
+                <h3>2. Scalar Multiplication</h3>
+                <div class="formula-box">
+                    (cA)<sub>ij</sub> = c · A<sub>ij</sub>
+                </div>
+
+                <h3>3. Matrix Multiplication</h3>
+                <p>For A (m × n) and B (n × p), the product AB is an m × p matrix:</p>
+                <div class="formula-box">
+                    (AB)<sub>ij</sub> = Σ<sub>k=1</sub><sup>n</sup> A<sub>ik</sub> · B<sub>kj</sub>
+                </div>
+
+                <h3>4. Matrix Transpose</h3>
+                <div class="formula-box">
+                    (A<sup>T</sup>)<sub>ij</sub> = A<sub>ji</sub>
+                </div>
+
+                <h3>5. Matrix Inverse</h3>
+                <p>For a square matrix A, the inverse A<sup>-1</sup> satisfies:</p>
+                <div class="formula-box">
+                    AA<sup>-1</sup> = A<sup>-1</sup>A = I
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Determinant</h2>
+                <p>The determinant is a scalar value that can be computed from a square matrix. For a 2×2 matrix:</p>
+                <div class="formula-box">
+                    det(A) = |A| =
+                    \begin{vmatrix}
+                    a & b \\
+                    c & d
+                    \end{vmatrix}
+                    = ad - bc
+                </div>
+                <p>For a 3×3 matrix:</p>
+                <div class="formula-box">
+                    |A| = a(ei - fh) - b(di - fg) + c(dh - eg)
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Examples</h2>
+                
+                <div class="example-box">
+                    <p class="question">Example 1: Matrix Addition</p>
+                    <p>Given: A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}</p>
+                    <p class="solution">Solution: A + B = \begin{bmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{bmatrix} = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}</p>
+                </div>
+
+                <div class="example-box">
+                    <p class="question">Example 2: Matrix Multiplication</p>
+                    <p>Given: A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, B = \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix}</p>
+                    <p class="solution">Solution: AB = \begin{bmatrix} (1·2+2·1) & (1·0+2·3) \\ (3·2+4·1) & (3·0+4·3) \end{bmatrix} = \begin{bmatrix} 4 & 6 \\ 10 & 12 \end{bmatrix}</p>
+                </div>
+
+                <div class="example-box">
+                    <p class="question">Example 3: Finding the Inverse</p>
+                    <p>Given: A = \begin{bmatrix} 4 & 7 \\ 2 & 6 \end{bmatrix}</p>
+                    <p class="solution">Solution: det(A) = 4(6) - 7(2) = 24 - 14 = 10<br>
+                    A<sup>-1</sup> = (1/10) \begin{bmatrix} 6 & -7 \\ -2 & 4 \end{bmatrix} = \begin{bmatrix} 0.6 & -0.7 \\ -0.2 & 0.4 \end{bmatrix}</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Applications</h2>
+                <ul>
+                    <li><strong>Systems of Linear Equations:</strong> Ax = b can be solved using matrix methods like Gaussian elimination or Cramer's rule.</li>
+                    <li><strong>Computer Graphics:</strong> Matrices represent transformations (rotation, scaling, translation) in 2D and 3D graphics.</li>
+                    <li><strong>Physics:</strong> Quantum mechanics uses matrices to represent physical quantities and transformations.</li>
+                    <li><strong>Data Science:</strong> Matrices store and manipulate datasets for machine learning algorithms.</li>
+                    <li><strong>Economics:</strong> Input-output models use matrices to analyze economic systems.</li>
+                    <li><strong>Engineering:</strong> Structural analysis and signal processing rely heavily on matrix computations.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Properties</h2>
+                <ul>
+                    <li><strong>Associative:</strong> (AB)C = A(BC)</li>
+                    <li><strong>Distributive:</strong> A(B + C) = AB + AC</li>
+                    <li><strong>Not Commutative:</strong> AB ≠ BA (in general)</li>
+                    <li><strong>Transpose of Product:</strong> (AB)<sup>T</sup> = B<sup>T</sup>A<sup>T</sup></li>
+                    <li><strong>Inverse of Product:</strong> (AB)<sup>-1</sup> = B<sup>-1</sup>A<sup>-1</sup></li>
+                </ul>
+            </section>
+
+            <div class="related-topics">
+                <h3>Related Topics</h3>
+                <ul>
+                    <li><a href="./">Determinant</a></li>
+                    <li><a href="../vector-space/">Vector Space</a></li>
+                    <li><a href="./">Linear Equation</a></li>
+                    <li><a href="./">Eigenvalue</a></li>
+                    <li><a href="./">Linear Algebra</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+        <footer class="academy-footer">
+        <div class="footer-content">
+            <h3 style="font-family: 'Georgia', serif; margin-bottom: 1.5rem;">SkytrailGroup Mathematics Academy</h3>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto 2rem;">
+                Advancing mathematical education through innovative technology and pedagogical research.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="/aboutus" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">About Us</a>
+                <a href="/contactus" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Contact Us</a>
+                <a href="/privacy" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Privacy Policy</a>
+                <a href="/terms" style="color: var(--color-academic-primary); text-decoration: none; font-size: 0.95rem;">Terms of Service</a>
+            </div>
+            <p style="margin-top: 3rem; opacity: 0.6; font-size: 0.9rem;">
+                &copy; 2026 SkytrailGroup Mathematics Academy. All rights reserved.<br>Powered by Intelligent Academic Widgets System.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../js/intelligent_academic_widgets.js"></script>
+    <script src="../../js/academic_interactions.js"></script>
+</body>
+</html>

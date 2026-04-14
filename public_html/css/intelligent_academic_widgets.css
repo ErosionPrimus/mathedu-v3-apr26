@@ -1,0 +1,867 @@
+/* Intelligent Academic Widget System */
+/* Based on Cedar Design System Colors with High-Intelligence Academic Style */
+
+:root {
+  /* Cedar Design System Color Palette - Academic Adaptation */
+  --academic-primary: #dee777;          /* Main accent - Theorem highlights */
+  --academic-secondary: #2e3105;        /* Dark accent - Headings, text */
+  --academic-dark: #b7bb7e;            /* Darker accent - Backgrounds */
+  --academic-light: #fffcc0;           /* Light accent - Card backgrounds */
+  --academic-bg: #fdffe9;              /* Background - Page background */
+  
+  /* Derived Academic Colors */
+  --academic-text: #2e3105;
+  --academic-text-light: #5a5d3a;
+  --academic-border: rgba(46, 49, 5, 0.15);
+  --academic-border-light: rgba(46, 49, 5, 0.08);
+  
+  /* Academic Typography */
+  --academic-heading: 'Georgia', 'Times New Roman', serif;
+  --academic-body: 'Helvetica Neue', Arial, sans-serif;
+  --academic-mono: 'Courier New', 'Lucida Console', monospace;
+  
+  /* Academic Spacing */
+  --academic-xs: 0.5rem;
+  --academic-sm: 1rem;
+  --academic-md: 2rem;
+  --academic-lg: 4rem;
+  --academic-xl: 8rem;
+  
+  /* Academic Animations */
+  --academic-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --academic-medium: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --academic-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Academic Shadows */
+  --academic-shadow-sm: 0 2px 8px rgba(46, 49, 5, 0.08);
+  --academic-shadow-md: 0 4px 16px rgba(46, 49, 5, 0.12);
+  --academic-shadow-lg: 0 8px 32px rgba(46, 49, 5, 0.15);
+  
+  /* Academic Gradients */
+  --academic-gradient: linear-gradient(135deg, var(--academic-light) 0%, var(--academic-bg) 100%);
+  --academic-gradient-dark: linear-gradient(135deg, var(--academic-dark) 0%, var(--academic-secondary) 100%);
+}
+
+/* Reset & Academic Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--academic-body);
+  color: var(--academic-text);
+  background-color: var(--academic-bg);
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  padding-top: 60px; /* compensate fixed academic-nav-widget */
+}
+
+/* Academic Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--academic-heading);
+  font-weight: 700;
+  color: var(--academic-secondary);
+  margin-bottom: var(--academic-sm);
+  position: relative;
+}
+
+h1::after, h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--academic-primary);
+  border-radius: 2px;
+}
+
+/* Academic Typography Enhancements */
+.academic-lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--academic-text-light);
+  font-weight: 300;
+  margin-bottom: var(--academic-md);
+}
+
+.academic-code {
+  font-family: var(--academic-mono);
+  background: rgba(222, 231, 119, 0.1);
+  border: 1px solid var(--academic-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  color: var(--academic-secondary);
+}
+
+/* WIDGET TEMPLATES */
+
+/* 1. Theorem Widget */
+.theorem-widget {
+  background: var(--academic-bg);
+  border-left: 5px solid var(--academic-primary);
+  border-radius: 0 8px 8px 0;
+  padding: var(--academic-md);
+  margin: var(--academic-lg) 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--academic-shadow-sm);
+  transition: all var(--academic-medium);
+}
+
+.theorem-widget::before {
+  content: 'THEOREM';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--academic-primary);
+  color: var(--academic-secondary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 0 0 0 8px;
+  letter-spacing: 1px;
+}
+
+.theorem-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--academic-shadow-md);
+}
+
+.theorem-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--academic-secondary);
+  margin-bottom: var(--academic-sm);
+  font-family: var(--academic-heading);
+}
+
+.theorem-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--academic-text-light);
+}
+
+.theorem-proof-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--academic-secondary);
+  color: var(--academic-bg);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: var(--academic-sm);
+  transition: all var(--academic-fast);
+  font-family: var(--academic-body);
+}
+
+.theorem-proof-toggle:hover {
+  background: var(--academic-primary);
+  color: var(--academic-secondary);
+  transform: translateY(-2px);
+}
+
+/* 2. Proof Widget */
+.proof-widget {
+  background: var(--academic-light);
+  border: 1px solid var(--academic-border);
+  border-radius: 12px;
+  padding: var(--academic-md);
+  margin: var(--academic-md) 0;
+  position: relative;
+  display: none;
+  animation: proofReveal 0.6s var(--academic-medium) both;
+}
+
+.proof-widget.active {
+  display: block;
+}
+
+.proof-widget::before {
+  content: 'PROOF';
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--academic-light);
+  color: var(--academic-secondary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  border: 1px solid var(--academic-border);
+}
+
+.proof-step {
+  margin-bottom: var(--academic-sm);
+  padding-left: 24px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: proofStep 0.4s var(--academic-fast) forwards;
+}
+
+.proof-step::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--academic-primary);
+  font-weight: 700;
+}
+
+.proof-step:nth-child(2) { animation-delay: 0.1s; }
+.proof-step:nth-child(3) { animation-delay: 0.2s; }
+.proof-step:nth-child(4) { animation-delay: 0.3s; }
+.proof-step:nth-child(5) { animation-delay: 0.4s; }
+
+/* 3. Definition Widget */
+.definition-widget {
+  background: linear-gradient(135deg, rgba(255, 252, 192, 0.3) 0%, rgba(253, 255, 233, 0.1) 100%);
+  border: 1px solid var(--academic-border-light);
+  border-radius: 12px;
+  padding: var(--academic-md);
+  margin: var(--academic-md) 0;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: all var(--academic-medium);
+}
+
+.definition-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--academic-shadow-md);
+}
+
+.definition-term {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--academic-secondary);
+  margin-bottom: var(--academic-xs);
+  font-family: var(--academic-heading);
+}
+
+.definition-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--academic-text);
+}
+
+/* 4. Example Widget */
+.example-widget {
+  background: var(--academic-bg);
+  border: 2px solid var(--academic-primary);
+  border-radius: 12px;
+  padding: var(--academic-md);
+  margin: var(--academic-md) 0;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--academic-medium);
+}
+
+.example-widget::before {
+  content: 'EXAMPLE';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--academic-primary);
+  color: var(--academic-secondary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 6px 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.example-content {
+  margin-top: var(--academic-md);
+  padding: var(--academic-sm);
+  background: rgba(222, 231, 119, 0.1);
+  border-radius: 8px;
+  font-family: var(--academic-mono);
+  line-height: 1.8;
+}
+
+/* 5. Equation Widget */
+.equation-widget {
+  background: var(--academic-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 8px;
+  padding: var(--academic-md);
+  margin: var(--academic-md) 0;
+  text-align: center;
+  position: relative;
+  font-family: var(--academic-mono);
+  font-size: 1.5rem;
+  color: var(--academic-secondary);
+  overflow: hidden;
+  transition: all var(--academic-medium);
+}
+
+.equation-widget:hover {
+  background: var(--academic-light);
+  transform: translateY(-4px);
+  box-shadow: var(--academic-shadow-sm);
+}
+
+.equation-solution {
+  display: none;
+  margin-top: var(--academic-sm);
+  padding-top: var(--academic-sm);
+  border-top: 2px solid var(--academic-primary);
+  animation: fadeInUp 0.6s var(--academic-medium) both;
+}
+
+.equation-solution.active {
+  display: block;
+}
+
+/* 6. Knowledge Graph Widget */
+.knowledge-graph-widget {
+  background: var(--academic-gradient);
+  border-radius: 16px;
+  padding: var(--academic-xl);
+  margin: var(--academic-xl) 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.knowledge-graph-widget--vis {
+  display: block;
+  overflow: visible;
+  align-items: stretch;
+}
+
+.knowledge-graph-widget--vis [data-kg-role="mount"] {
+  touch-action: none;
+}
+
+.knowledge-node {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--academic-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--academic-secondary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all var(--academic-medium);
+  box-shadow: var(--academic-shadow-md);
+}
+
+.knowledge-node:hover {
+  transform: scale(1.1);
+  box-shadow: var(--academic-shadow-lg);
+}
+
+.knowledge-connection {
+  position: absolute;
+  background: var(--academic-secondary);
+  opacity: 0.3;
+  transform-origin: 0 0;
+}
+
+/* 7. Research Paper Widget */
+.research-widget {
+  background: var(--academic-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 8px;
+  padding: var(--academic-lg);
+  margin: var(--academic-md) 0;
+  position: relative;
+  transition: all var(--academic-medium);
+}
+
+.research-widget:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--academic-shadow-lg);
+}
+
+.research-header {
+  border-bottom: 2px solid var(--academic-primary);
+  padding-bottom: var(--academic-sm);
+  margin-bottom: var(--academic-md);
+}
+
+.research-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--academic-secondary);
+  margin-bottom: var(--academic-xs);
+}
+
+.research-authors {
+  color: var(--academic-text-light);
+  font-size: 1rem;
+  margin-bottom: var(--academic-xs);
+}
+
+.research-abstract {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--academic-text);
+  margin-bottom: var(--academic-md);
+}
+
+.research-metrics {
+  display: flex;
+  gap: var(--academic-lg);
+  padding-top: var(--academic-sm);
+  border-top: 1px solid var(--academic-border-light);
+}
+
+.metric-item {
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--academic-primary);
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--academic-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 8. Academic Navigation Widget */
+.academic-nav-widget {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(253, 255, 233, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--academic-border);
+  transition: all var(--academic-medium);
+}
+
+.academic-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--academic-sm) var(--academic-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.academic-nav-logo {
+  font-family: var(--academic-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--academic-secondary);
+  text-decoration: none;
+  position: relative;
+}
+
+.academic-nav-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--academic-primary);
+  transform: scaleX(0);
+  transition: transform var(--academic-medium);
+}
+
+.academic-nav-logo:hover::after {
+  transform: scaleX(1);
+}
+
+.academic-nav-menu {
+  display: flex;
+  gap: var(--academic-lg);
+  list-style: none;
+}
+
+.academic-nav-link {
+  color: var(--academic-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: var(--academic-xs) 0;
+  transition: color var(--academic-fast);
+}
+
+.academic-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--academic-primary);
+  transition: width var(--academic-medium);
+}
+
+.academic-nav-link:hover {
+  color: var(--academic-secondary);
+}
+
+.academic-nav-link:hover::after {
+  width: 100%;
+}
+
+/* 9. Citation Widget */
+.citation-widget {
+  background: rgba(255, 252, 192, 0.2);
+  border-left: 4px solid var(--academic-dark);
+  border-radius: 0 8px 8px 0;
+  padding: var(--academic-md);
+  margin: var(--academic-md) 0;
+  position: relative;
+  transition: all var(--academic-medium);
+}
+
+.citation-widget:hover {
+  background: rgba(255, 252, 192, 0.3);
+  transform: translateX(4px);
+}
+
+.citation-author {
+  font-weight: 700;
+  color: var(--academic-secondary);
+  margin-bottom: var(--academic-xs);
+}
+
+.citation-title {
+  font-style: italic;
+  color: var(--academic-text);
+  margin-bottom: var(--academic-xs);
+}
+
+.citation-journal {
+  color: var(--academic-text-light);
+  font-size: 0.9rem;
+}
+
+/* 10. Interactive Quiz Widget */
+.quiz-widget {
+  background: var(--academic-gradient);
+  border-radius: 16px;
+  padding: var(--academic-xl);
+  margin: var(--academic-xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-question {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--academic-secondary);
+  margin-bottom: var(--academic-lg);
+  text-align: center;
+}
+
+.quiz-options {
+  display: grid;
+  gap: var(--academic-sm);
+  margin-bottom: var(--academic-lg);
+}
+
+.quiz-option {
+  background: var(--academic-bg);
+  border: 2px solid var(--academic-border);
+  border-radius: 8px;
+  padding: var(--academic-md);
+  cursor: pointer;
+  transition: all var(--academic-fast);
+  font-weight: 500;
+}
+
+.quiz-option:hover {
+  background: var(--academic-light);
+  transform: translateY(-2px);
+  box-shadow: var(--academic-shadow-sm);
+}
+
+.quiz-option.selected {
+  background: var(--academic-primary);
+  border-color: var(--academic-primary);
+  color: var(--academic-secondary);
+}
+
+.quiz-feedback {
+  text-align: center;
+  padding: var(--academic-md);
+  border-radius: 8px;
+  margin-top: var(--academic-md);
+  animation: fadeIn 0.6s var(--academic-medium) both;
+  display: none;
+}
+
+.quiz-feedback.correct {
+  background: rgba(222, 231, 119, 0.3);
+  border: 2px solid var(--academic-primary);
+  color: var(--academic-secondary);
+  display: block;
+}
+
+.quiz-feedback.incorrect {
+  background: rgba(255, 99, 99, 0.1);
+  border: 2px solid #ff6363;
+  color: #ff6363;
+  display: block;
+}
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes proofReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes proofStep {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes knowledgeBloom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes academicPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+/* Utility Classes */
+.academic-fade-in-up {
+  animation: fadeInUp 0.8s var(--academic-medium) both;
+}
+
+.academic-fade-in {
+  animation: fadeIn 0.6s var(--academic-slow) both;
+}
+
+.academic-pulse {
+  animation: academicPulse 2s infinite;
+}
+
+.academic-delay-100 { animation-delay: 0.1s; }
+.academic-delay-200 { animation-delay: 0.2s; }
+.academic-delay-300 { animation-delay: 0.3s; }
+.academic-delay-500 { animation-delay: 0.5s; }
+.academic-delay-700 { animation-delay: 0.7s; }
+
+/* Academic Button Widget */
+.academic-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: var(--academic-body);
+  transition: all var(--academic-medium);
+  letter-spacing: 0.5px;
+}
+
+.academic-button-primary {
+  background: var(--academic-primary);
+  color: var(--academic-secondary);
+}
+
+.academic-button-primary:hover {
+  background: var(--academic-secondary);
+  color: var(--academic-bg);
+  transform: translateY(-3px);
+  box-shadow: var(--academic-shadow-md);
+}
+
+.academic-button-secondary {
+  background: var(--academic-secondary);
+  color: var(--academic-bg);
+}
+
+.academic-button-secondary:hover {
+  background: var(--academic-primary);
+  color: var(--academic-secondary);
+  transform: translateY(-3px);
+  box-shadow: var(--academic-shadow-md);
+}
+
+/* Academic Card Widget */
+.academic-card {
+  background: var(--academic-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 12px;
+  padding: var(--academic-lg);
+  transition: all var(--academic-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.academic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--academic-shadow-lg);
+}
+
+.academic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--academic-primary), var(--academic-light));
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  .academic-nav-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+
+  .academic-nav-logo {
+    font-size: 0;
+    flex-shrink: 0;
+  }
+
+  .academic-nav-logo i {
+    font-size: 1.2rem;
+  }
+
+  .academic-nav-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0;
+    flex: 1;
+    min-width: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .academic-nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .academic-nav-menu li {
+    flex-shrink: 0;
+  }
+
+  .academic-nav-menu .academic-nav-link {
+    white-space: nowrap;
+    font-size: 0.78rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(46,49,5,0.07);
+    border-radius: 4px;
+  }
+  
+  .knowledge-graph-widget {
+    min-height: 300px;
+    padding: var(--academic-md);
+  }
+  
+  .knowledge-node {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .academic-nav-widget,
+  .quiz-widget,
+  .knowledge-graph-widget {
+    display: none;
+  }
+  
+  .theorem-widget,
+  .definition-widget,
+  .example-widget,
+  .research-widget {
+    break-inside: avoid;
+  }
+  
+  body {
+    color: #000;
+    background: #fff;
+  }
+}

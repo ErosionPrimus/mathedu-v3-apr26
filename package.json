@@ -1,0 +1,9 @@
+{
+  "name": "skytrailgroup-site",
+  "private": true,
+  "description": "Static SkytrailGroup Mathematics Academy site — local preview for Cursor / VS Code",
+  "scripts": {
+    "serve": "python3 -m http.server 8080 --directory public_html",
+    "serve:node": "npx --yes serve public_html -l 8080"
+  }
+}

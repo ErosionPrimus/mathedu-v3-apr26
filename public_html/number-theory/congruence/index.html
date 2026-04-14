@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congruences | SkytrailGroup Mathematics Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="description" content="Expert notes on Congruences: definitions, core results, and examples.">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/congruence">
+    <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+                <li><a href="/geometry/" class="academic-nav-link">Geometry</a></li>
+                <li><a href="/number-theory/" class="academic-nav-link">Number Theory</a></li>
+                <li><a href="/statistics/" class="academic-nav-link">Statistics</a></li>
+                <li><a href="/linear-algebra/" class="academic-nav-link">Linear Algebra</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <main class="main-container">
+
+        <article class="topic-detail">
+            <header class="topic-header">
+                <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../">Number theory</a><span>›</span><span>Congruences</span></nav>
+                <h1>Congruences</h1>
+                <p class="text-muted">Graduate-accessible overview of congruences with classical statements and a concrete illustration.</p>
+            </header>
+            <section class="content-section">
+                <h2>Formal setup</h2>
+                <p>\(a\equiv b\pmod m\) iff \(m\mid(a-b)\); congruences respect addition and multiplication.</p>
+                
+            </section>
+            <section class="content-section">
+                <h2>Key ideas</h2>
+                <ul><li>Proofs mix elementary divisibility with algebraic and analytic tools.</li><li>Computational aspects matter for cryptography and algorithms.</li><li>Open problems (twin primes, Goldbach, RH) drive research.</li></ul>
+            </section>
+            <section class="content-section">
+                <h2>Worked example</h2>
+                <div class="example-box">
+                    <p class="question"><strong>Problem.</strong> Illustrate the topic with a numeric or conceptual takeaway.</p>
+                    <p class="solution"><strong>Solution.</strong> Solve \(3x\equiv 1\pmod{11}\): multiply by inverse of 3 mod 11, which is 4, giving \(x\equiv 4\).</p>
+                </div>
+            </section>
+            <section class="content-section related-topics">
+                <h3>Related topics</h3>
+                <ul><li><a href="../">Number theory hub</a></li><li><a href="../prime-number/">Prime numbers</a></li><li><a href="../modular-arithmetic/">Modular arithmetic</a></li></ul>
+            </section>
+        </article>
+    <div class="content-section" id="indepth"><h2>In Depth</h2><p>Two integers \(a\) and \(b\) are congruent modulo \(n\) (written \(a\equiv b\pmod{n}\)) if \(n\mid(a-b)\). Congruence is an equivalence relation that partitions the integers into \(n\) residue classes \(\{0,1,\ldots,n-1\}\). Arithmetic on residue classes forms the ring \(\mathbb{Z}/n\mathbb{Z}\).</p><p>Congruences can be added and multiplied: if \(a\equiv b\) and \(c\equiv d\pmod{n}\), then \(a+c\equiv b+d\) and \(ac\equiv bd\pmod{n}\). Division requires care: \(ac\equiv bc\pmod{n}\) implies \(a\equiv b\pmod{n/\gcd(c,n)}\), not necessarily \(\pmod{n}\).</p><p>Fermat's little theorem: if \(p\) is prime and \(\gcd(a,p)=1\), then \(a^{p-1}\equiv 1\pmod{p}\). Euler's generalization: \(a^{\phi(n)}\equiv 1\pmod{n}\) when \(\gcd(a,n)=1\). These are the basis of RSA and other public-key cryptosystems.</p><p>The Chinese Remainder Theorem (CRT) reconstructs an integer from its residues modulo pairwise coprime moduli. If \(n=p_1p_2\cdots p_k\) with distinct primes, then \(\mathbb{Z}/n\mathbb{Z}\cong\mathbb{Z}/p_1\mathbb{Z}\times\cdots\times\mathbb{Z}/p_k\mathbb{Z}\). CRT is used in fast arithmetic and in cryptographic protocols.</p><p>Quadratic congruences \(x^2\equiv a\pmod{p}\) are solvable iff \(a\) is a quadratic residue mod \(p\), determined by the Legendre symbol \((a/p)=a^{(p-1)/2}\bmod p\). The law of quadratic reciprocity relates \((p/q)\) and \((q/p)\) for odd primes \(p,q\) and is one of the most celebrated theorems in number theory.</p></div>
+<div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>Wilson's theorem: \(p\) is prime iff \((p-1)!\equiv-1\pmod{p}\). While impractical for primality testing (computing \((p-1)!\) is expensive), it is theoretically elegant and has applications in combinatorics.</p><p>The structure of \(\mathbb{Z}/n\mathbb{Z}\): it is a field iff \(n\) is prime. The group of units \((\mathbb{Z}/n\mathbb{Z})^*\) has order \(\phi(n)\) and is cyclic iff \(n=1,2,4,p^k,2p^k\). Understanding this group structure is essential for cryptographic applications.</p><p>Congruences modulo prime powers: Hensel's lemma lifts solutions of \(f(x)\equiv0\pmod{p}\) to solutions modulo \(p^k\), provided \(f'(x)\not\equiv0\pmod{p}\). This is the \(p\)-adic analogue of Newton's method and is used in solving polynomial congruences.</p></div>
+<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of congruence connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+</main>
+    <footer class="academy-footer">
+        <div class="footer-content">
+            <p style="opacity:0.75;font-size:0.9rem;">&copy; 2026 SkytrailGroup Mathematics Academy</p>
+        </div>
+    </footer>
+    <script src="../../js/intelligent_academic_widgets.js"></script>
+    <script src="../../js/academic_interactions.js"></script>
+</body>
+</html>

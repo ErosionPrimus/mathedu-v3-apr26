@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separable Equations | SkytrailGroup Mathematics Academy</title>
+    <meta name="author" content="SkytrailGroup Mathematics Editorial Team">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Solving separable first-order ODEs.">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/separable-equations">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08L01JDD3F');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
+
+    <style>
+      .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
+      .topic-main{min-width:0;}
+      .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
+      .topic-toc h3{margin:0 0 0.8rem;font-size:1rem;font-weight:600;}
+      .topic-toc ul{list-style:none;padding:0;margin:0;}
+      .topic-toc li{margin:0.35rem 0;}
+      .topic-toc a{color:inherit;text-decoration:none;opacity:0.75;}
+      .topic-toc a:hover{opacity:1;text-decoration:underline;}
+      @media(max-width:860px){
+        .topic-layout{grid-template-columns:1fr;}
+        .topic-toc{position:static;order:-1;}
+      }
+      .example-box{background:var(--secondary,#f8f9fa);border-left:3px solid var(--accent,#0d6efd);border-radius:0 6px 6px 0;padding:1rem 1.2rem;margin:1rem 0;}
+      .example-box .question{font-weight:600;margin-bottom:0.5rem;}
+      .example-box .solution{margin:0;}
+      .formula-box{background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:6px;padding:0.9rem 1.2rem;margin:0.8rem 0;overflow-x:auto;}
+      .prop-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;}
+      .prop-table th{background:var(--secondary,#f8f9fa);padding:0.6rem 0.8rem;text-align:left;border-bottom:2px solid var(--border,#dee2e6);}
+      .prop-table td{padding:0.55rem 0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
+      .content-section{margin-bottom:2rem;}
+      .content-section h2{font-size:1.3rem;margin-bottom:0.7rem;padding-bottom:0.3rem;border-bottom:1px solid var(--border,#dee2e6);}
+      .content-section h3{font-size:1.1rem;margin:1rem 0 0.5rem;}
+      .related-topics ul{display:flex;flex-wrap:wrap;gap:0.5rem;list-style:none;padding:0;}
+      .related-topics a{display:inline-block;padding:0.3rem 0.75rem;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:20px;font-size:0.88rem;text-decoration:none;color:inherit;}
+      .related-topics a:hover{background:var(--accent,#0d6efd);color:#fff;border-color:var(--accent,#0d6efd);}
+      .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
+      .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="academic-nav-widget">
+        <div class="academic-nav-container">
+            <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
+            <ul class="academic-nav-menu">
+                <li><a href="/" class="academic-nav-link">Home</a></li>
+                <li><a href="/algebra/" class="academic-nav-link">Algebra</a></li>
+                <li><a href="/calculus/" class="academic-nav-link">Calculus</a></li>
+                <li><a href="/geometry/" class="academic-nav-link">Geometry</a></li>
+                <li><a href="/number-theory/" class="academic-nav-link">Number Theory</a></li>
+                <li><a href="/statistics/" class="academic-nav-link">Statistics</a></li>
+                <li><a href="/linear-algebra/" class="academic-nav-link">Linear Algebra</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div class="progress-bar" id="reading-progress"></div>
+<div class="topic-layout"><main class="topic-main"><nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/calculus/">Calculus</a><span>›</span><span>Separable Equations</span></nav><h1>Separable Equations</h1><p class="article-byline"><span class="byline-author"><i class="fas fa-user-graduate"></i> By <strong>SkytrailGroup Mathematics Editorial Team</strong></span><span class="byline-date"><i class="fas fa-calendar-alt"></i> <time datetime="2026-04-12">April 12, 2026</time></span></p><div class="content-section" id="method"><h2>Method</h2><p>Rewrite as \(g(y)dy=f(x)dx\), integrate both sides, solve for y.</p></div><div class="content-section" id="examples"><h2>Examples</h2><div class="example-box">
+            <p class="question"><strong>Example 1.</strong> dy/dx = xy.</p>
+            <p class="solution"><strong>Solution.</strong> dy/y = x dx → ln|y|=x²/2+C → y=Ae^{{x²/2}}.</p>
+        </div>
+</div><div class="content-section" id="indepth"><h2>In Depth</h2><p>A separable ODE has the form \(dy/dx = f(x)g(y)\). The solution method: separate variables to get \(dy/g(y) = f(x)\,dx\), then integrate both sides. This works whenever \(g(y)\neq0\); solutions where \(g(y)=0\) are equilibrium (constant) solutions.</p><p>Exponential growth and decay \(dy/dt = ky\) is the simplest separable equation. Separating: \(dy/y = k\,dt\), integrating: \(\ln|y| = kt+C\), so \(y = Ae^{kt}\). For \(k>0\): exponential growth (population, compound interest). For \(k<0\): exponential decay (radioactive decay, drug elimination).</p><p>The logistic equation \(dy/dt = ry(1-y/K)\) is separable. Partial fractions give the solution \(y(t) = K/(1+Ae^{-rt})\), an S-shaped curve approaching the carrying capacity \(K\). This models population growth with resource limits, epidemic spread, and technology adoption.</p><p>Newton's law of cooling \(dT/dt = -k(T-T_\infty)\) is separable: \(T(t) = T_\infty + (T_0-T_\infty)e^{-kt}\). It models the temperature of an object cooling toward ambient temperature \(T_\infty\), with applications in forensics (estimating time of death) and engineering (thermal management).</p></div>
+<div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>A separable ODE \(dy/dx=f(x)g(y)\) is solved by separating variables: \(dy/g(y)=f(x)\,dx\), then integrating both sides. This gives an implicit solution \(G(y)=F(x)+C\) where \(G'=1/g\) and \(F'=f\). Solving for \(y\) (if possible) gives the explicit solution.</p><p>Equilibrium solutions occur where \(g(y)=0\) — the function \(y=y_0\) (constant) satisfies the ODE. Stability analysis determines whether nearby solutions approach or diverge from equilibrium: if \(g'(y_0)<0\) (in the autonomous case \(dy/dx=g(y)\)), the equilibrium is stable.</p><p>Classic separable equations: exponential growth/decay \(dy/dt=ky\) (solution \(y=Ce^{kt}\)); logistic growth \(dy/dt=ky(1-y/K)\) (solution via partial fractions); Newton's law of cooling \(dT/dt=-k(T-T_\infty)\). These model population dynamics, radioactive decay, and heat transfer.</p></div>
+<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of separable equations connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+</main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#method">Method</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
+        <div class="footer-content">
+            <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
+            <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+                <a href="/aboutus" style="color:var(--color-academic-primary,#dee777);text-decoration:none;">About Us</a>
+                <a href="/contactus" style="color:var(--color-academic-primary,#dee777);text-decoration:none;">Contact Us</a>
+                <a href="/privacy" style="color:var(--color-academic-primary,#dee777);text-decoration:none;">Privacy Policy</a>
+                <a href="/terms" style="color:var(--color-academic-primary,#dee777);text-decoration:none;">Terms of Service</a>
+            </div>
+            <p style="opacity:0.6;font-size:0.9rem;">&copy; 2026 SkytrailGroup Mathematics Academy. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../js/intelligent_academic_widgets.js"></script>
+    <script src="../../js/academic_interactions.js"></script>
+</body>
+</html>
