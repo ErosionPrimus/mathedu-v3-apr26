@@ -16,6 +16,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="/js/consent-loader.js" defer></script>
+<style>
+      .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
+      .topic-main{min-width:0;}
+      .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
+      .topic-toc h3{margin:0 0 0.8rem;font-size:1rem;font-weight:600;}
+      .topic-toc ul{list-style:none;padding:0;margin:0;}
+      .topic-toc li{margin:0.35rem 0;}
+      .topic-toc a{color:inherit;text-decoration:none;opacity:0.75;}
+      .topic-toc a:hover{opacity:1;text-decoration:underline;}
+      @media(max-width:860px){
+        .topic-layout{grid-template-columns:1fr;}
+        .topic-toc{position:static;order:-1;}
+      }
+      .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
+      .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -39,7 +55,7 @@
         </div>
     </nav>
 
-    <main class="main-container">
+    <div class="topic-layout"><main class="topic-main">
         <article class="topic-detail">
             <div class="topic-header">
                 <nav class="breadcrumb">
@@ -54,13 +70,13 @@
                 <p class="text-muted">A fundamental algebraic expression consisting of variables and coefficients with applications across mathematics, physics, and engineering.</p>
             </div>
 
-            <section class="content-section">
+            <section class="content-section" id="section-1">
                 <h2>Definition</h2>
                 <p>A <strong>polynomial</strong> is an expression consisting of variables (also called indeterminates) and coefficients, that involves only the operations of addition, subtraction, multiplication, and non-negative integer exponents of variables. Polynomials appear in many areas of mathematics and science.</p>
                 <p>An example of a polynomial of a single indeterminate <em>x</em> is <em>x² − 4x + 7</em>. An example in three variables is <em>x³ + 2xyz² − yz + 1</em>.</p>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-2">
                 <h2>General Form</h2>
                 <p>A polynomial in one variable <em>x</em> of degree <em>n</em> has the form:</p>
                 <div class="formula-box">
@@ -75,7 +91,7 @@
                 </ul>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-3">
                 <h2>Key Terminology</h2>
                 <ul>
                     <li><strong>Term:</strong> Each part of the polynomial separated by + or − signs</li>
@@ -89,7 +105,7 @@
                 </ul>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-4">
                 <h2>Polynomial Operations</h2>
                 
                 <h3>1. Addition and Subtraction</h3>
@@ -115,7 +131,7 @@
                 </div>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-5">
                 <h2>Factoring Polynomials</h2>
                 <p>Factoring is the process of breaking down a polynomial into a product of simpler polynomials.</p>
                 
@@ -133,7 +149,7 @@
                 </div>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-6">
                 <h2>Polynomial Functions</h2>
                 <p>A polynomial function is a function that can be defined by evaluating a polynomial:</p>
                 <div class="formula-box">
@@ -149,7 +165,7 @@
                 </ul>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-7">
                 <h2>Examples</h2>
                 
                 <div class="example-box">
@@ -170,7 +186,7 @@
                 </div>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-8">
                 <h2>Applications</h2>
                 <ul>
                     <li><strong>Physics:</strong> Modeling motion, energy, and wave functions</li>
@@ -198,7 +214,7 @@
                 </ul>
             </section>
         </article>
-    </main>
+    </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#section-1">Definition</a></li><li><a href="#section-2">General Form</a></li><li><a href="#section-3">Key Terminology</a></li><li><a href="#section-4">Polynomial Operations</a></li><li><a href="#section-5">Factoring Polynomials</a></li><li><a href="#section-6">Polynomial Functions</a></li><li><a href="#section-7">Examples</a></li><li><a href="#section-8">Applications</a></li></ul></aside></div>
 
         <footer class="academy-footer">
         <div class="footer-content">

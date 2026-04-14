@@ -16,6 +16,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="/js/consent-loader.js" defer></script>
+<style>
+      .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
+      .topic-main{min-width:0;}
+      .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
+      .topic-toc h3{margin:0 0 0.8rem;font-size:1rem;font-weight:600;}
+      .topic-toc ul{list-style:none;padding:0;margin:0;}
+      .topic-toc li{margin:0.35rem 0;}
+      .topic-toc a{color:inherit;text-decoration:none;opacity:0.75;}
+      .topic-toc a:hover{opacity:1;text-decoration:underline;}
+      @media(max-width:860px){
+        .topic-layout{grid-template-columns:1fr;}
+        .topic-toc{position:static;order:-1;}
+      }
+      .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
+      .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -39,7 +55,7 @@
         </div>
     </nav>
 
-    <main class="main-container">
+    <div class="topic-layout"><main class="topic-main">
         <article class="topic-detail">
             <div class="topic-header">
                 <nav class="breadcrumb">
@@ -54,7 +70,7 @@
                 <p class="text-muted">A fundamental algebraic structure consisting of vectors that can be added together and multiplied by scalars, forming the basis of linear algebra.</p>
             </div>
 
-            <section class="content-section">
+            <section class="content-section" id="section-1">
                 <h2>Definition</h2>
                 <p>A <strong>vector space</strong> (or linear space) over a field F is a set V together with two operations:</p>
                 <ul>
@@ -64,7 +80,7 @@
                 <p>These operations must satisfy eight axioms for all vectors u, v, w ∈ V and all scalars a, b ∈ F.</p>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-2">
                 <h2>The Eight Axioms</h2>
                 <h3>Associativity of Addition</h3>
                 <div class="formula-box">
@@ -110,7 +126,7 @@
                 </div>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-3">
                 <h2>Examples of Vector Spaces</h2>
                 
                 <h3>Euclidean Space Rⁿ</h3>
@@ -133,7 +149,7 @@
                 <p>The set of all continuous real-valued functions on interval [a,b].</p>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-4">
                 <h2>Important Concepts</h2>
                 
                 <h3>Linear Combination</h3>
@@ -156,7 +172,7 @@
                 <p>The dimension of a vector space is the number of vectors in any basis for the space.</p>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-5">
                 <h2>Subspaces</h2>
                 <p>A <strong>subspace</strong> W of a vector space V is a subset that is itself a vector space under the same operations. To verify W is a subspace:</p>
                 <ol>
@@ -166,7 +182,7 @@
                 </ol>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-6">
                 <h2>Examples</h2>
                 
                 <div class="example-box">
@@ -207,7 +223,7 @@
                 </div>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-7">
                 <h2>Applications</h2>
                 <ul>
                     <li><strong>Physics:</strong> Representing forces, velocities, and displacements in mechanics</li>
@@ -219,7 +235,7 @@
                 </ul>
             </section>
 
-            <section class="content-section">
+            <section class="content-section" id="section-8">
                 <h2>Related Topics</h2>
                 <ul>
                     <li><a href="../matrix/">Matrix</a> - Represents linear transformations between vector spaces</li>
@@ -233,7 +249,7 @@
 <div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
 <div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
 
-</main>
+</main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#section-1">Definition</a></li><li><a href="#section-2">The Eight Axioms</a></li><li><a href="#section-3">Examples of Vector Spaces</a></li><li><a href="#section-4">Important Concepts</a></li><li><a href="#section-5">Subspaces</a></li><li><a href="#section-6">Examples</a></li><li><a href="#section-7">Applications</a></li><li><a href="#section-8">Related Topics</a></li></ul></aside></div>
 
         <footer class="academy-footer">
         <div class="footer-content">
