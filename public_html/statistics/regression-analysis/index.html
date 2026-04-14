@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Simple linear regression, OLS estimation, and R² goodness of fit.">
-    <link rel="canonical" href="https://skytrailgroup.com/statistics/regression-analysis">
+    <link rel="canonical" href="https://skytrailgroup.com/statistics/regression-analysis/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -95,10 +82,11 @@
         </div>
 
   </div>
-<div class="content-section" id="background"><h2>Regression Overview</h2><p>Regression analysis models the relationship between a response variable \(Y\) and one or more predictor variables \(X_1,\ldots,X_p\). Simple linear regression (one predictor) fits a line \(\hat{y}=\hat{\beta}_0+\hat{\beta}_1 x\) that minimizes the sum of squared residuals \(\sum(y_i-\hat{y}_i)^2\) — the ordinary least squares (OLS) criterion.</p><p>The OLS estimators are unbiased and, under the Gauss–Markov assumptions (linearity, independence, homoscedasticity, zero-mean errors), have the smallest variance among all linear unbiased estimators (BLUE property).</p></div>
-<div class="content-section" id="inference_reg"><h2>Inference in Regression</h2><p>After fitting, we test whether the slope \(\beta_1\) is significantly different from zero using a t-test: \(t=\hat{\beta}_1/\text{SE}(\hat{\beta}_1)\) with \(n-2\) degrees of freedom. A significant slope means \(X\) is a useful linear predictor of \(Y\).</p><p>The coefficient of determination \(R^2=1-\text{SSE}/\text{SST}\) measures the proportion of variance in \(Y\) explained by the model. \(R^2\) ranges from 0 (no fit) to 1 (perfect fit). In multiple regression, adjusted \(R^2\) penalizes for adding predictors that do not improve fit.</p><p>Residual diagnostics check model assumptions: a residual plot (residuals vs. fitted values) should show no pattern; a Q–Q plot checks normality of residuals; Cook's distance identifies influential observations.</p></div>
-<div class="content-section" id="applications_reg"><h2>Applications</h2><p>Regression is used in economics (demand forecasting), medicine (dose-response relationships), social sciences (predicting outcomes from demographics), and machine learning (linear regression as a baseline model). Multiple regression extends to many predictors; logistic regression handles binary outcomes; polynomial regression fits curves.</p></div>
-<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of regression analysis connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Regression Analysis</h2><p>This section builds durable understanding of regression analysis in statistics through definition-first reasoning, theorem mapping, and error-checking workflows.</p><p>Use a two-pass method: first derive the structure symbolically, then validate with a concrete numerical or geometric test case.</p></div>
+<div class="content-section" id="visual-intuition"><h2>Visual Intuition</h2><p>Convert algebra into a diagram, graph, or dependency map before solving. Visual-first analysis reduces sign errors and makes assumptions explicit.</p><div class="formula-box">Checklist: domain constraints - symmetry - limiting behavior - sanity check at special values.</div></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice A.</strong> Re-derive one key formula on this page from first principles and annotate each transformation.</p><p class="solution"><strong>Target.</strong> Your final line should include assumptions, derivation path, and a quick verification.</p></div><div class="example-box"><p class="question"><strong>Practice B.</strong> Build an application scenario using regression analysis and solve it with both symbolic and numeric methods.</p><p class="solution"><strong>Target.</strong> Compare outputs and explain any approximation gap.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Editorial update:</strong> Reviewed on 2026-04-14 for notation consistency, conceptual clarity, and exercise quality.</p></div>
+
 </main>
 <aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#slr">Simple Linear Regression</a></li><li><a href="#ols">OLS Estimates</a></li><li><a href="#fit">Goodness of Fit</a></li><li><a href="#examples">Examples</a></li></ul></aside>
 </div>    <footer class="academy-footer">
@@ -115,5 +103,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

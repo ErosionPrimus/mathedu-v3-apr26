@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Multiplicative functions like σ, τ, and μ.">
-    <link rel="canonical" href="https://skytrailgroup.com/number-theory/arithmetic-functions">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/arithmetic-functions/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>An arithmetic function maps positive integers to complex numbers. Key examples: \(d(n)\) (number of divisors), \(\sigma(n)\) (sum of divisors), \(\phi(n)\) (Euler's totient), \(\mu(n)\) (Möbius function), \(\Lambda(n)\) (von Mangoldt function). These encode deep properties of the integers.</p><p>Multiplicative functions satisfy \(f(mn)=f(m)f(n)\) when \(\gcd(m,n)=1\). Completely multiplicative functions satisfy this for all \(m,n\). The Dirichlet series \(\sum_{n=1}^\infty f(n)/n^s\) encodes a multiplicative function as an Euler product \(\prod_p(1+f(p)/p^s+f(p^2)/p^{2s}+\cdots)\).</p><p>Dirichlet convolution: \((f*g)(n)=\sum_{d\mid n}f(d)g(n/d)\). Arithmetic functions form a ring under pointwise addition and Dirichlet convolution. The identity element is \(\epsilon(n)=[n=1]\). The Möbius function is the inverse of the constant function 1: \(\mu*1=\epsilon\).</p><p>Möbius inversion: if \(g(n)=\sum_{d\mid n}f(d)\), then \(f(n)=\sum_{d\mid n}\mu(n/d)g(d)\). This is used to invert summatory formulas — for example, recovering \(\phi\) from the identity \(\sum_{d\mid n}\phi(d)=n\).</p><p>The Riemann zeta function \(\zeta(s)=\sum_{n=1}^\infty n^{-s}=\prod_p(1-p^{-s})^{-1}\) is the Dirichlet series of the constant function 1. The distribution of its zeros controls the error term in the prime number theorem, connecting arithmetic functions to complex analysis.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The Ramanujan sum \(c_q(n)=\sum_{\gcd(k,q)=1}e^{2\pi ikn/q}\) is a multiplicative arithmetic function that appears in the Fourier analysis of arithmetic functions. It satisfies \(c_q(n)=\mu(q/\gcd(n,q))\phi(q)/\phi(q/\gcd(n,q))\).</p><p>Selberg's formula \(\sum_{p\leq x}(\ln p)^2+\sum_{pq\leq x}\ln p\ln q=2x\ln x+O(x)\) is the starting point for the elementary proof of the prime number theorem. It shows that primes are 'almost' uniformly distributed without using complex analysis.</p><p>The Dirichlet hyperbola method computes \(\sum_{n\leq x}(f*g)(n)\) efficiently by splitting the sum at \(\sqrt{x}\). Applied to \(d=1*1\), it gives \(\sum_{n\leq x}d(n)=x\ln x+(2\gamma-1)x+O(\sqrt{x})\) — the Dirichlet divisor problem.</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of arithmetic functions connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Arithmetic Functions</h2><p>This lesson extends core ideas for arithmetic functions with rigorous reasoning, edge-case checks, and application framing in number theory.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#arithmetic">Key Functions</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

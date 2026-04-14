@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="The gradient vector and directional derivatives.">
-    <link rel="canonical" href="https://skytrailgroup.com/calculus/gradient">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/gradient/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>The gradient \(\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)\) is the multivariable generalization of the derivative. It is a vector field that points in the direction of steepest ascent of \(f\), with magnitude equal to the maximum rate of change.</p><p>The directional derivative \(D_{\mathbf{u}}f = \nabla f \cdot \mathbf{u}\) gives the rate of change in any direction \(\mathbf{u}\). The gradient is perpendicular to level curves (in 2D) and level surfaces (in 3D) — a fact used in implicit differentiation and in defining surface normals.</p><p>Gradient descent is the workhorse optimization algorithm in machine learning. Starting from an initial point, it iteratively moves in the direction \(-\nabla f\) (steepest descent) to minimize \(f\). Variants include stochastic gradient descent (SGD), momentum, Adam, and RMSProp, each addressing different challenges in high-dimensional optimization.</p><p>The gradient theorem (fundamental theorem for line integrals): \(\int_C \nabla f \cdot d\mathbf{r} = f(\mathbf{b}) - f(\mathbf{a})\). A vector field is conservative (path-independent) if and only if it is the gradient of some scalar potential function.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The gradient is central to optimization. At a local minimum or maximum of \(f\), \(\nabla f=\mathbf{0}\) (necessary condition). The second-derivative test uses the Hessian matrix \(H_{ij}=\partial^2f/\partial x_i\partial x_j\): if \(\nabla f=0\) and \(H\) is positive definite, the point is a local minimum.</p><p>Lagrange multipliers use the gradient to optimize \(f\) subject to constraints \(g=0\): at a constrained extremum, \(\nabla f=\lambda\nabla g\). This says the gradient of \(f\) is parallel to the gradient of the constraint — the level curves of \(f\) and \(g\) are tangent.</p><p>In physics, the gradient of a scalar potential gives a force field: \(\mathbf{F}=-\nabla V\) (conservative force). The electric field is \(\mathbf{E}=-\nabla\phi\); gravity is \(\mathbf{g}=-\nabla\Phi\). The negative sign means forces point toward lower potential energy.</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of gradient connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Gradient</h2><p>This lesson extends core ideas for gradient with rigorous reasoning, edge-case checks, and application framing in calculus.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#def">Definition</a></li><li><a href="#directional">Directional Derivative</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

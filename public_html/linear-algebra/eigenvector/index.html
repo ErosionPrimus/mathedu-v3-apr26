@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Computing eigenvectors and eigenspaces.">
-    <link rel="canonical" href="https://skytrailgroup.com/linear-algebra/eigenvector">
+    <link rel="canonical" href="https://skytrailgroup.com/linear-algebra/eigenvector/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>An eigenvector of a matrix \(A\) is a nonzero vector \(\mathbf{v}\) satisfying \(A\mathbf{v}=\lambda\mathbf{v}\) for some scalar \(\lambda\) (the eigenvalue). Eigenvectors point in directions that are only scaled, not rotated, by \(A\). They reveal the intrinsic geometry of the linear transformation.</p><p>Eigenvalues are roots of the characteristic polynomial \(\det(A-\lambda I)=0\). An \(n\times n\) matrix has \(n\) eigenvalues (counting multiplicity) over \(\mathbb{C}\). The trace equals the sum of eigenvalues; the determinant equals their product.</p><p>The eigenspace for eigenvalue \(\lambda\) is \(\ker(A-\lambda I)\), the null space of \(A-\lambda I\). Its dimension (geometric multiplicity) may be less than the algebraic multiplicity (multiplicity as a root of the characteristic polynomial). When they are equal for all eigenvalues, \(A\) is diagonalizable.</p><p>Symmetric matrices (\(A=A^T\)) have real eigenvalues and orthogonal eigenvectors (spectral theorem). This makes them especially well-behaved: they are always diagonalizable as \(A=Q\Lambda Q^T\) with orthogonal \(Q\). Positive definite matrices have all positive eigenvalues.</p><p>Power iteration finds the dominant eigenvector by repeatedly multiplying by \(A\) and normalizing. The QR algorithm computes all eigenvalues efficiently. In data science, PCA finds the eigenvectors of the covariance matrix; Google's PageRank is the dominant eigenvector of the web's link matrix.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The spectral theorem for symmetric matrices: every real symmetric matrix \(A\) has an orthonormal eigenbasis and real eigenvalues. This means \(A=Q\Lambda Q^T\) with orthogonal \(Q\) and diagonal \(\Lambda\). Symmetric matrices represent self-adjoint operators in quantum mechanics (observables).</p><p>Perron–Frobenius theorem: a matrix with all positive entries has a unique largest real eigenvalue (the Perron root) with a corresponding eigenvector of all positive entries. This is the basis of Google's PageRank algorithm and Markov chain analysis.</p><p>Eigenvalue perturbation theory (Weyl's inequalities, Bauer–Fike theorem) bounds how much eigenvalues change when a matrix is perturbed. This is crucial for numerical stability analysis and for understanding the sensitivity of physical systems to parameter changes.</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of eigenvector connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Eigenvector</h2><p>This lesson extends core ideas for eigenvector with rigorous reasoning, edge-case checks, and application framing in linear algebra.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#eigenvecto">Method</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

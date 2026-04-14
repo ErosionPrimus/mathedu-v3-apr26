@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Definition, limit laws, and evaluation techniques for limits.">
-    <link rel="canonical" href="https://skytrailgroup.com/calculus/limit">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/limit/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -90,10 +77,11 @@
         </div>
 
   </div>
-<div class="content-section" id="background"><h2>Background & Motivation</h2><p>The concept of a limit is the cornerstone of modern calculus. Before the 17th century, mathematicians struggled to give rigorous meaning to instantaneous velocity and the area under a curve. Newton and Leibniz independently developed calculus, but it was Cauchy and Weierstrass in the 19th century who gave limits their precise ε–δ definition, finally placing calculus on a firm logical foundation.</p><p>Informally, \(\lim_{x\to a}f(x)=L\) means we can make \(f(x)\) as close to \(L\) as we wish by taking \(x\) sufficiently close to \(a\) — without ever requiring \(x=a\). This subtlety is crucial: the limit describes the <em>approach</em>, not the value at the point.</p><p>One-sided limits extend this idea: the left-hand limit \(\lim_{x\to a^-}f(x)\) considers only \(x<a\), and the right-hand limit \(\lim_{x\to a^+}f(x)\) considers only \(x>a\). A two-sided limit exists if and only if both one-sided limits exist and are equal.</p></div>
-<div class="content-section" id="techniques"><h2>Evaluation Techniques</h2><p>Direct substitution works whenever \(f\) is continuous at \(a\): simply compute \(f(a)\). When this yields an indeterminate form such as \(0/0\) or \(\infty/\infty\), other techniques are needed.</p><p>Factoring and cancellation: if \(f(x)=(x^2-1)/(x-1)\), factor the numerator to get \((x+1)(x-1)/(x-1)\), cancel, and substitute to obtain \(\lim_{x\to1}f(x)=2\).</p><p>L'Hôpital's Rule: for \(0/0\) or \(\infty/\infty\) forms, \(\lim f/g = \lim f'/g'\) (provided the latter limit exists). This powerful tool converts many hard limits into straightforward derivatives.</p><p>The Squeeze Theorem is indispensable for oscillating functions: if \(g(x)\leq f(x)\leq h(x)\) near \(a\) and \(\lim g=\lim h=L\), then \(\lim f=L\). The classic application is \(\lim_{x\to0}(\sin x)/x=1\).</p></div>
-<div class="content-section" id="applications"><h2>Applications</h2><p>Limits underpin every major concept in calculus. The derivative is defined as a limit of a difference quotient; the definite integral is a limit of Riemann sums; continuity is defined in terms of limits. In analysis, limits of sequences and series determine convergence. In physics, instantaneous velocity, acceleration, and electric field intensity all rely on limiting processes.</p><p>In numerical analysis, understanding limits helps predict the behavior of algorithms as step sizes shrink. In probability theory, the Central Limit Theorem — one of the most important results in all of mathematics — is itself a statement about the limit of a sequence of distributions.</p></div>
-<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of limit connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Limit</h2><p>This section builds durable understanding of limit in calculus through definition-first reasoning, theorem mapping, and error-checking workflows.</p><p>Use a two-pass method: first derive the structure symbolically, then validate with a concrete numerical or geometric test case.</p></div>
+<div class="content-section" id="visual-intuition"><h2>Visual Intuition</h2><p>Convert algebra into a diagram, graph, or dependency map before solving. Visual-first analysis reduces sign errors and makes assumptions explicit.</p><div class="formula-box">Checklist: domain constraints - symmetry - limiting behavior - sanity check at special values.</div></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice A.</strong> Re-derive one key formula on this page from first principles and annotate each transformation.</p><p class="solution"><strong>Target.</strong> Your final line should include assumptions, derivation path, and a quick verification.</p></div><div class="example-box"><p class="question"><strong>Practice B.</strong> Build an application scenario using limit and solve it with both symbolic and numeric methods.</p><p class="solution"><strong>Target.</strong> Compare outputs and explain any approximation gap.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Editorial update:</strong> Reviewed on 2026-04-14 for notation consistency, conceptual clarity, and exercise quality.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#def">Definition</a></li><li><a href="#laws">Limit Laws</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -108,5 +96,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

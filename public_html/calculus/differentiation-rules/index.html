@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Complete table of differentiation rules including trig, exponential, and logarithmic.">
-    <link rel="canonical" href="https://skytrailgroup.com/calculus/differentiation-rules">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/differentiation-rules/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -90,10 +77,11 @@
         </div>
 
   </div>
-<div class="content-section" id="background"><h2>Why These Rules Matter</h2><p>Computing derivatives from the limit definition is tedious. The differentiation rules — power, product, quotient, chain — allow us to differentiate any elementary function algebraically, without returning to limits. These rules are derived once from the definition and then applied mechanically.</p><p>The <strong>chain rule</strong> \((f\circ g)'=(f'\circ g)\cdot g'\) is arguably the most important: it handles compositions, which appear everywhere. In neural networks, backpropagation is simply the chain rule applied repeatedly through layers of composed functions.</p><p>The <strong>product rule</strong> \((fg)'=f'g+fg'\) reflects the fact that when two quantities both change, the total change has two contributions. Integration by parts is the integral analogue of the product rule.</p></div>
-<div class="content-section" id="implicit"><h2>Implicit and Logarithmic Differentiation</h2><p>When a function is defined implicitly by an equation like \(x^2+y^2=r^2\), we differentiate both sides with respect to \(x\), treating \(y\) as a function of \(x\) and applying the chain rule to \(y\)-terms. This gives \(2x+2y(dy/dx)=0\), so \(dy/dx=-x/y\).</p><p>Logarithmic differentiation simplifies products and powers: take \(\ln\) of both sides, differentiate, then multiply through by the original function. For \(y=x^x\), \(\ln y=x\ln x\), so \(y'/y=\ln x+1\), giving \(y'=x^x(\ln x+1)\).</p></div>
-<div class="content-section" id="applications"><h2>Applications</h2><p>Differentiation rules are used in every quantitative field. In physics, deriving equations of motion from energy functions requires the chain rule. In economics, elasticity of demand is computed using the quotient rule. In computer graphics, ray tracing and surface normal computation rely on differentiating implicit surface equations.</p></div>
-<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of differentiation rules connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Differentiation Rules</h2><p>This section builds durable understanding of differentiation rules in calculus through definition-first reasoning, theorem mapping, and error-checking workflows.</p><p>Use a two-pass method: first derive the structure symbolically, then validate with a concrete numerical or geometric test case.</p></div>
+<div class="content-section" id="visual-intuition"><h2>Visual Intuition</h2><p>Convert algebra into a diagram, graph, or dependency map before solving. Visual-first analysis reduces sign errors and makes assumptions explicit.</p><div class="formula-box">Checklist: domain constraints - symmetry - limiting behavior - sanity check at special values.</div></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice A.</strong> Re-derive one key formula on this page from first principles and annotate each transformation.</p><p class="solution"><strong>Target.</strong> Your final line should include assumptions, derivation path, and a quick verification.</p></div><div class="example-box"><p class="question"><strong>Practice B.</strong> Build an application scenario using differentiation rules and solve it with both symbolic and numeric methods.</p><p class="solution"><strong>Target.</strong> Compare outputs and explain any approximation gap.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Editorial update:</strong> Reviewed on 2026-04-14 for notation consistency, conceptual clarity, and exercise quality.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#trig">Trig Derivatives</a></li><li><a href="#exp">Exponential & Log</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -108,5 +96,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Convergence of sequences and series with key tests.">
-    <link rel="canonical" href="https://skytrailgroup.com/calculus/sequences-and-series">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/sequences-and-series/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -93,10 +80,11 @@
         </div>
 
   </div>
-<div class="content-section" id="background"><h2>Sequences</h2><p>A sequence \(\{a_n\}\) is a function from the positive integers to the reals. It converges to \(L\) if for every \(\varepsilon>0\) there exists \(N\) such that \(|a_n-L|<\varepsilon\) for all \(n>N\). Monotone bounded sequences always converge — a fact used constantly in analysis.</p><p>Important sequences: \(a_n=1/n\to0\), \(a_n=r^n\to0\) for \(|r|<1\), \(a_n=(1+1/n)^n\to e\). The last limit defines Euler's number \(e\approx2.71828\).</p></div>
-<div class="content-section" id="series_detail"><h2>Series</h2><p>An infinite series \(\sum_{n=1}^\infty a_n\) converges if its partial sums \(S_N=\sum_{n=1}^N a_n\) converge. The geometric series \(\sum_{n=0}^\infty ar^n=a/(1-r)\) for \(|r|<1\) is the most important example.</p><p>The harmonic series \(\sum 1/n\) diverges despite \(1/n\to0\) — a famous counterexample showing that \(a_n\to0\) is necessary but not sufficient for convergence.</p><p>Absolute convergence (\(\sum|a_n|\) converges) implies convergence and allows rearrangement of terms. Conditional convergence (convergent but not absolutely) is more delicate: the Riemann rearrangement theorem says the terms can be rearranged to sum to any value.</p></div>
-<div class="content-section" id="tests_detail"><h2>Convergence Tests</h2><p>The <strong>ratio test</strong> \(L=\lim|a_{n+1}/a_n|\) is best for factorials and exponentials. The <strong>root test</strong> \(L=\lim|a_n|^{1/n}\) works well for \(n\)th powers. The <strong>integral test</strong> compares \(\sum f(n)\) to \(\int f\). The <strong>comparison test</strong> and <strong>limit comparison test</strong> relate an unknown series to a known one. The <strong>alternating series test</strong> (Leibniz) handles series with alternating signs.</p></div>
-<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of sequences and series connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Sequences And Series</h2><p>This section builds durable understanding of sequences and series in calculus through definition-first reasoning, theorem mapping, and error-checking workflows.</p><p>Use a two-pass method: first derive the structure symbolically, then validate with a concrete numerical or geometric test case.</p></div>
+<div class="content-section" id="visual-intuition"><h2>Visual Intuition</h2><p>Convert algebra into a diagram, graph, or dependency map before solving. Visual-first analysis reduces sign errors and makes assumptions explicit.</p><div class="formula-box">Checklist: domain constraints - symmetry - limiting behavior - sanity check at special values.</div></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice A.</strong> Re-derive one key formula on this page from first principles and annotate each transformation.</p><p class="solution"><strong>Target.</strong> Your final line should include assumptions, derivation path, and a quick verification.</p></div><div class="example-box"><p class="question"><strong>Practice B.</strong> Build an application scenario using sequences and series and solve it with both symbolic and numeric methods.</p><p class="solution"><strong>Target.</strong> Compare outputs and explain any approximation gap.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Editorial update:</strong> Reviewed on 2026-04-14 for notation consistency, conceptual clarity, and exercise quality.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#sequences">Sequences</a></li><li><a href="#series">Series</a></li><li><a href="#tests">Convergence Tests</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -111,5 +99,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

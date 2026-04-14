@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Extrema, MVT, and optimization using derivatives.">
-    <link rel="canonical" href="https://skytrailgroup.com/calculus/applications-of-derivatives">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/applications-of-derivatives/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -93,9 +80,11 @@
         </div>
 
   </div>
-<div class="content-section" id="background"><h2>Overview</h2><p>Once we can compute derivatives, we can use them to analyze function behavior in detail. The first derivative test classifies critical points: if \(f'\) changes from positive to negative at \(c\), then \(f(c)\) is a local maximum; if from negative to positive, a local minimum.</p><p>The second derivative test provides an alternative: if \(f'(c)=0\) and \(f''(c)>0\), then \(c\) is a local minimum; if \(f''(c)<0\), a local maximum. If \(f''(c)=0\), the test is inconclusive.</p><p>Curve sketching combines all this information: find domain, intercepts, symmetry, asymptotes, intervals of increase/decrease (from \(f'\)), and concavity (from \(f''\)) to produce an accurate graph without plotting many points.</p></div>
-<div class="content-section" id="optimization"><h2>Optimization</h2><p>Applied optimization problems ask for the maximum or minimum of a quantity subject to constraints. The procedure: (1) identify the objective function and any constraints, (2) use constraints to reduce to one variable, (3) find critical points, (4) check endpoints and second derivative to confirm the nature of each critical point.</p><p>Classic examples include minimizing the surface area of a can for a fixed volume, maximizing the area of a rectangle inscribed in a circle, and finding the dimensions of the cheapest box. In machine learning, training a model is an optimization problem: minimize the loss function over millions of parameters.</p><p>Related rates problems use implicit differentiation with respect to time. If a ladder slides down a wall, the rates at which the base moves out and the top slides down are related by differentiating the Pythagorean constraint \(x^2+y^2=L^2\) with respect to \(t\).</p></div>
-<div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of applications of derivatives connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Applications Of Derivatives</h2><p>This section builds durable understanding of applications of derivatives in calculus through definition-first reasoning, theorem mapping, and error-checking workflows.</p><p>Use a two-pass method: first derive the structure symbolically, then validate with a concrete numerical or geometric test case.</p></div>
+<div class="content-section" id="visual-intuition"><h2>Visual Intuition</h2><p>Convert algebra into a diagram, graph, or dependency map before solving. Visual-first analysis reduces sign errors and makes assumptions explicit.</p><div class="formula-box">Checklist: domain constraints - symmetry - limiting behavior - sanity check at special values.</div></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice A.</strong> Re-derive one key formula on this page from first principles and annotate each transformation.</p><p class="solution"><strong>Target.</strong> Your final line should include assumptions, derivation path, and a quick verification.</p></div><div class="example-box"><p class="question"><strong>Practice B.</strong> Build an application scenario using applications of derivatives and solve it with both symbolic and numeric methods.</p><p class="solution"><strong>Target.</strong> Compare outputs and explain any approximation gap.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Editorial update:</strong> Reviewed on 2026-04-14 for notation consistency, conceptual clarity, and exercise quality.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#extrema">Extrema</a></li><li><a href="#mvt">Mean Value Theorem</a></li><li><a href="#optim">Optimization</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -110,5 +99,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

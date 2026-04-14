@@ -9,29 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <meta name="description" content="Expert notes on Congruences: definitions, core results, and examples.">
-    <link rel="canonical" href="https://skytrailgroup.com/number-theory/congruence">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/congruence/">
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7040270645748987" crossorigin="anonymous"></script>
-
+<script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -52,6 +37,7 @@
             <header class="topic-header">
                 <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../">Number theory</a><span>›</span><span>Congruences</span></nav>
                 <h1>Congruences</h1>
+                <p class="article-byline"><span class="byline-author"><i class="fas fa-user-pen"></i> By <strong>SkytrailGroup Mathematics Editorial Team</strong></span><span class="byline-date"><i class="fas fa-calendar-check"></i> <time datetime="2026-04-14">April 14, 2026</time></span></p>
                 <p class="text-muted">Graduate-accessible overview of congruences with classical statements and a concrete illustration.</p>
             </header>
             <section class="content-section">
@@ -78,6 +64,10 @@
     <div class="content-section" id="indepth"><h2>In Depth</h2><p>Two integers \(a\) and \(b\) are congruent modulo \(n\) (written \(a\equiv b\pmod{n}\)) if \(n\mid(a-b)\). Congruence is an equivalence relation that partitions the integers into \(n\) residue classes \(\{0,1,\ldots,n-1\}\). Arithmetic on residue classes forms the ring \(\mathbb{Z}/n\mathbb{Z}\).</p><p>Congruences can be added and multiplied: if \(a\equiv b\) and \(c\equiv d\pmod{n}\), then \(a+c\equiv b+d\) and \(ac\equiv bd\pmod{n}\). Division requires care: \(ac\equiv bc\pmod{n}\) implies \(a\equiv b\pmod{n/\gcd(c,n)}\), not necessarily \(\pmod{n}\).</p><p>Fermat's little theorem: if \(p\) is prime and \(\gcd(a,p)=1\), then \(a^{p-1}\equiv 1\pmod{p}\). Euler's generalization: \(a^{\phi(n)}\equiv 1\pmod{n}\) when \(\gcd(a,n)=1\). These are the basis of RSA and other public-key cryptosystems.</p><p>The Chinese Remainder Theorem (CRT) reconstructs an integer from its residues modulo pairwise coprime moduli. If \(n=p_1p_2\cdots p_k\) with distinct primes, then \(\mathbb{Z}/n\mathbb{Z}\cong\mathbb{Z}/p_1\mathbb{Z}\times\cdots\times\mathbb{Z}/p_k\mathbb{Z}\). CRT is used in fast arithmetic and in cryptographic protocols.</p><p>Quadratic congruences \(x^2\equiv a\pmod{p}\) are solvable iff \(a\) is a quadratic residue mod \(p\), determined by the Legendre symbol \((a/p)=a^{(p-1)/2}\bmod p\). The law of quadratic reciprocity relates \((p/q)\) and \((q/p)\) for odd primes \(p,q\) and is one of the most celebrated theorems in number theory.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>Wilson's theorem: \(p\) is prime iff \((p-1)!\equiv-1\pmod{p}\). While impractical for primality testing (computing \((p-1)!\) is expensive), it is theoretically elegant and has applications in combinatorics.</p><p>The structure of \(\mathbb{Z}/n\mathbb{Z}\): it is a field iff \(n\) is prime. The group of units \((\mathbb{Z}/n\mathbb{Z})^*\) has order \(\phi(n)\) and is cyclic iff \(n=1,2,4,p^k,2p^k\). Understanding this group structure is essential for cryptographic applications.</p><p>Congruences modulo prime powers: Hensel's lemma lifts solutions of \(f(x)\equiv0\pmod{p}\) to solutions modulo \(p^k\), provided \(f'(x)\not\equiv0\pmod{p}\). This is the \(p\)-adic analogue of Newton's method and is used in solving polynomial congruences.</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of congruence connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Congruence</h2><p>This lesson extends core ideas for congruence with rigorous reasoning, edge-case checks, and application framing in number theory.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main>
     <footer class="academy-footer">
         <div class="footer-content">
@@ -86,5 +76,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

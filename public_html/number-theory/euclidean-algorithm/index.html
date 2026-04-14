@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="The Euclidean algorithm for computing GCD.">
-    <link rel="canonical" href="https://skytrailgroup.com/number-theory/euclidean-algorithm">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/euclidean-algorithm/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>The Euclidean algorithm computes \(\gcd(a,b)\) by repeated division: \(\gcd(a,b)=\gcd(b,a\bmod b)\), terminating when the remainder is 0. It is one of the oldest algorithms, appearing in Euclid's Elements (c. 300 BCE), and runs in \(O(\log\min(a,b))\) steps.</p><p>The extended Euclidean algorithm also finds integers \(x,y\) such that \(ax+by=\gcd(a,b)\) (Bézout's identity). These coefficients are used to compute modular inverses: if \(\gcd(a,n)=1\), then \(a^{-1}\bmod n\) is the \(x\) from \(ax+ny=1\).</p><p>Worst-case inputs are consecutive Fibonacci numbers: \(\gcd(F_{n+1},F_n)\) requires exactly \(n\) steps. This proves the algorithm's \(O(\log n)\) bound is tight. The Fibonacci numbers are the 'most difficult' inputs for the Euclidean algorithm.</p><p>The binary GCD algorithm replaces division with subtraction and halving, using only bit shifts and subtraction — faster on hardware where division is expensive. It achieves the same \(O(\log n)\) complexity.</p><p>The Euclidean algorithm generalizes to any Euclidean domain: a ring with a 'size' function where division with remainder is possible. Examples include the Gaussian integers \(\mathbb{Z}[i]\) and polynomial rings \(F[x]\) over a field. In these settings, the algorithm computes GCDs of complex numbers or polynomials.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The Euclidean algorithm is the oldest non-trivial algorithm still in widespread use. Its time complexity is \(O(\log\min(a,b))\) divisions, or \(O(\log^2 n)\) bit operations. For large integers, fast multiplication (Karatsuba, FFT-based) reduces this to \(O(M(n)\log n)\) where \(M(n)\) is the multiplication cost.</p><p>The subresultant algorithm extends the Euclidean algorithm to polynomials, computing GCDs without coefficient explosion. It is used in computer algebra systems (Mathematica, Maple, SageMath) for symbolic computation.</p><p>The Euclidean algorithm has a beautiful connection to the Stern–Brocot tree: the sequence of quotients in the algorithm traces a path in the tree from the root to the fraction \(a/b\). This gives a bijection between positive rationals and finite binary strings.</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of euclidean algorithm connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Euclidean Algorithm</h2><p>This lesson extends core ideas for euclidean algorithm with rigorous reasoning, edge-case checks, and application framing in number theory.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#euclidean_">Algorithm</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

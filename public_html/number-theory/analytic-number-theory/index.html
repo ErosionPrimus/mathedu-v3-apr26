@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Using analysis to study number-theoretic functions.">
-    <link rel="canonical" href="https://skytrailgroup.com/number-theory/analytic-number-theory">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/analytic-number-theory/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>Analytic number theory uses tools from complex analysis and real analysis to study the distribution of primes and arithmetic functions. Its central object is the Riemann zeta function \(\zeta(s)=\sum_{n=1}^\infty n^{-s}\), which encodes prime distribution via the Euler product \(\prod_p(1-p^{-s})^{-1}\).</p><p>The prime number theorem (PNT): \(\pi(x)\sim x/\ln x\) as \(x\to\infty\). Proved independently by Hadamard and de la Vallée Poussin in 1896 using the fact that \(\zeta(s)\neq0\) on the line \(\text{Re}(s)=1\). An elementary proof (without complex analysis) was found by Selberg and Erdős in 1949.</p><p>Dirichlet's theorem on primes in arithmetic progressions: if \(\gcd(a,q)=1\), there are infinitely many primes \(p\equiv a\pmod{q}\). The proof uses Dirichlet \(L\)-functions \(L(s,\chi)=\sum_{n=1}^\infty\chi(n)/n^s\) for Dirichlet characters \(\chi\) modulo \(q\).</p><p>The Riemann hypothesis (RH): all non-trivial zeros of \(\zeta(s)\) lie on the critical line \(\text{Re}(s)=1/2\). RH implies the sharpest known error term in the PNT: \(\pi(x)=\text{Li}(x)+O(\sqrt{x}\ln x)\). It remains unproved and is one of the Millennium Prize Problems.</p><p>The circle method (Hardy–Littlewood–Ramanujan) uses Fourier analysis on \(\mathbb{Z}/N\mathbb{Z}\) to count representations of integers as sums of primes or powers. It proved Vinogradov's theorem: every sufficiently large odd integer is a sum of three primes.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The explicit formula for \(\pi(x)\): \(\pi(x)=\text{Li}(x)-\sum_\rho\text{Li}(x^\rho)-\ln2+\int_x^\infty\frac{dt}{t(t^2-1)\ln t}\) where the sum is over non-trivial zeros \(\rho\) of \(\zeta\). Each zero contributes an oscillation to \(\pi(x)\); the Riemann hypothesis controls the size of these oscillations.</p><p>The large sieve inequality bounds exponential sums over primes and is a key tool in analytic number theory. It implies the Bombieri–Vinogradov theorem: primes are equidistributed in arithmetic progressions on average, with an error as good as GRH would give for individual progressions.</p><p>Exponential sums \(\sum_{n\leq N}e^{2\pi i f(n)}\) (Weyl sums) measure the equidistribution of sequences modulo 1. Weyl's theorem: \(\{n^k\alpha\}\) is equidistributed for irrational \(\alpha\). Van der Corput's method bounds these sums using repeated differencing.</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of analytic number theory connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Analytic Number Theory</h2><p>This lesson extends core ideas for analytic number theory with rigorous reasoning, edge-case checks, and application framing in number theory.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#analytic_n">Key Results</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

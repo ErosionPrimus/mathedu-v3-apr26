@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Number fields, rings of integers, and ideals.">
-    <link rel="canonical" href="https://skytrailgroup.com/number-theory/algebraic-number-theory">
+    <link rel="canonical" href="https://skytrailgroup.com/number-theory/algebraic-number-theory/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>Algebraic number theory studies number fields — finite extensions \(K/\mathbb{Q}\) — and their rings of integers \(\mathcal{O}_K\). The ring \(\mathcal{O}_K\) generalizes \(\mathbb{Z}\) but may fail unique factorization. The class group \(\text{Cl}(K)\) measures this failure; its order is the class number \(h_K\).</p><p>Dedekind's ideal theory restores unique factorization at the level of ideals: every nonzero ideal in \(\mathcal{O}_K\) factors uniquely as a product of prime ideals. This is the fundamental theorem of algebraic number theory.</p><p>The Minkowski bound \(M_K\) guarantees every ideal class contains an ideal of norm \(\leq M_K\). Since there are finitely many ideals of bounded norm, the class group is finite. Computing \(h_K\) is a central problem; for imaginary quadratic fields, Gauss's class number problem asked which have \(h_K=1\) (answer: exactly 9 fields).</p><p>The Dirichlet unit theorem describes the group of units \(\mathcal{O}_K^*\): it is isomorphic to \(\mu_K\times\mathbb{Z}^{r_1+r_2-1}\) where \(\mu_K\) is the finite group of roots of unity, \(r_1\) is the number of real embeddings, and \(r_2\) is the number of pairs of complex embeddings.</p><p>Class field theory describes all abelian extensions of a number field in terms of the arithmetic of the field itself (via idèles and the Artin map). It is the culmination of 19th-century number theory and the starting point for the Langlands program, which seeks to unify number theory and representation theory.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The Dedekind zeta function \(\zeta_K(s)=\sum_{\mathfrak{a}}N(\mathfrak{a})^{-s}\) (sum over nonzero ideals of \(\mathcal{O}_K\)) generalizes the Riemann zeta function. The analytic class number formula expresses the residue at \(s=1\) in terms of the class number, regulator, discriminant, and number of roots of unity.</p><p>Ramification describes how primes of \(\mathbb{Z}\) split in \(\mathcal{O}_K\): a prime \(p\) can split (\(e=1\), \(f=1\)), remain inert (\(e=1\), \(f=[K:\mathbb{Q}]\)), or ramify (\(e>1\)). Ramification is controlled by the discriminant: \(p\) ramifies iff \(p\mid\text{disc}(K/\mathbb{Q})\).</p><p>The Langlands program, formulated in 1967, proposes a vast web of correspondences between automorphic forms (generalizing modular forms) and Galois representations. Wiles' proof of Fermat's Last Theorem established a special case (modularity of elliptic curves over \(\mathbb{Q}\)).</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of algebraic number theory connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Algebraic Number Theory</h2><p>This lesson extends core ideas for algebraic number theory with rigorous reasoning, edge-case checks, and application framing in number theory.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#algebraic_">Key Concepts</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>

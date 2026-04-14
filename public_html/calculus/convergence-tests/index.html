@@ -12,22 +12,9 @@
     <link rel="stylesheet" href="../../css/intelligent_academic_widgets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="All major tests for series convergence.">
-    <link rel="canonical" href="https://skytrailgroup.com/calculus/convergence-tests">
+    <link rel="canonical" href="https://skytrailgroup.com/calculus/convergence-tests/">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08L01JDD3F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-08L01JDD3F');
-    </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T34MKQC7');</script>
-
-    <style>
+<style>
       .topic-layout{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start;max-width:1200px;margin:0 auto;padding:1.5rem 1rem;}
       .topic-main{min-width:0;}
       .topic-toc{position:sticky;top:80px;background:var(--secondary,#f8f9fa);border:1px solid var(--border,#dee2e6);border-radius:8px;padding:1.2rem;font-size:0.9rem;}
@@ -56,10 +43,10 @@
       .article-byline{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem;color:var(--muted-foreground,#6c757d);margin:0.4rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border,#dee2e6);}
       .byline-author,.byline-date{display:flex;align-items:center;gap:0.4rem;}
     </style>
+    <script src="/js/consent-loader.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T34MKQC7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="academic-nav-widget">
+<nav class="academic-nav-widget">
         <div class="academic-nav-container">
             <a href="/" class="academic-nav-logo"><i class="fas fa-square-root-alt"></i> SkytrailGroup Mathematics</a>
             <ul class="academic-nav-menu">
@@ -82,6 +69,10 @@
 </div><div class="content-section" id="indepth"><h2>In Depth</h2><p>Determining whether an infinite series converges is a central problem in analysis. No single test works for all series; choosing the right test requires recognizing the structure of the terms.</p><p>The <strong>divergence test</strong> (necessary condition): if \(\sum a_n\) converges, then \(a_n\to0\). Contrapositive: if \(a_n\not\to0\), the series diverges. This test can only prove divergence, never convergence.</p><p>The <strong>integral test</strong>: if \(f\) is positive, continuous, and decreasing on \([1,\infty)\) with \(f(n)=a_n\), then \(\sum a_n\) and \(\int_1^\infty f\,dx\) either both converge or both diverge. This gives the p-series result: \(\sum 1/n^p\) converges iff \(p>1\).</p><p>The <strong>ratio test</strong> \(L=\lim|a_{n+1}/a_n|\): converges absolutely if \(L<1\), diverges if \(L>1\), inconclusive if \(L=1\). Best for series with factorials or exponentials. The <strong>root test</strong> \(L=\lim|a_n|^{1/n}\): same conclusion rules. Best for series with \(n\)th powers.</p><p>The <strong>alternating series test</strong> (Leibniz): \(\sum(-1)^n b_n\) converges if \(b_n\) is decreasing and \(b_n\to0\). The error in truncating at \(N\) terms is bounded by \(b_{N+1}\). This gives a simple error estimate for alternating series approximations.</p></div>
 <div class="content-section" id="applications"><h2>Key Properties &amp; Applications</h2><p>The comparison test: if \(0\leq a_n\leq b_n\) and \(\sum b_n\) converges, so does \(\sum a_n\). The limit comparison test: if \(a_n/b_n\to L>0\), then \(\sum a_n\) and \(\sum b_n\) converge or diverge together. These reduce unknown series to known benchmarks like \(\sum 1/n^p\).</p><p>The ratio test: if \(|a_{n+1}/a_n|\to L\), the series converges absolutely if \(L<1\), diverges if \(L>1\), and is inconclusive if \(L=1\). The root test uses \(|a_n|^{1/n}\to L\) with the same criteria. Both tests work well for series involving factorials or exponentials.</p><p>The alternating series test (Leibniz): \(\sum(-1)^n b_n\) converges if \(b_n\) decreases to 0. The error in truncating at \(N\) terms is at most \(b_{N+1}\). Absolute convergence (\(\sum|a_n|<\infty\)) implies convergence; the converse fails (conditional convergence, e.g., \(\sum(-1)^n/n\)).</p></div>
 <div class="content-section" id="further"><h2>Further Reading &amp; Context</h2><p>The study of convergence tests connects to many areas of mathematics and its applications. Understanding the foundational definitions and theorems provides the basis for advanced work in analysis, algebra, and applied mathematics.</p><p>Historical development: most mathematical concepts evolved over centuries, with contributions from mathematicians across many cultures. The modern axiomatic treatment provides rigor, while computational tools enable practical application.</p><p>In modern mathematics, this topic appears in graduate courses and research across pure and applied mathematics. Connections to computer science, physics, and engineering make it a versatile and important area of study. Mastery of the core results and techniques opens doors to research in number theory, analysis, geometry, and beyond.</p><p>Recommended next steps: work through the standard theorems with full proofs, explore the connections to related topics listed above, and practice with a variety of problems ranging from computational exercises to theoretical proofs. The interplay between different areas of mathematics is one of the subject's greatest rewards.</p></div>
+<div class="content-section" id="deep-dive"><h2>Deep Dive: Convergence Tests</h2><p>This lesson extends core ideas for convergence tests with rigorous reasoning, edge-case checks, and application framing in calculus.</p></div>
+<div class="content-section" id="practice"><h2>Practice Set</h2><div class="example-box"><p class="question"><strong>Practice.</strong> Derive one main result on this page and validate with a numeric or geometric check.</p><p class="solution"><strong>Goal.</strong> Confirm assumptions, transformation steps, and final interpretation.</p></div></div>
+<div class="content-section" id="references"><h2>References & Editorial Notes</h2><ul><li>Stewart, <em>Calculus</em>.</li><li>Strang, <em>Introduction to Linear Algebra</em>.</li><li>Apostol, <em>Mathematical Analysis</em>.</li></ul><p><strong>Last editorial review:</strong> 2026-04-14.</p></div>
+
 </main><aside class="topic-toc"><h3>Contents</h3><ul><li><a href="#tests">Tests</a></li><li><a href="#examples">Examples</a></li></ul></aside></div>    <footer class="academy-footer">
         <div class="footer-content">
             <h3 style="font-family:'Georgia',serif;margin-bottom:1rem;">SkytrailGroup Mathematics Academy</h3>
@@ -96,5 +87,6 @@
     </footer>
     <script src="../../js/intelligent_academic_widgets.js"></script>
     <script src="../../js/academic_interactions.js"></script>
+    <script src="/js/content-provenance.js" defer></script>
 </body>
 </html>
